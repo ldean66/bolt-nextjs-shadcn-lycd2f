@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Heart, Calendar, Users, ArrowRight } from "lucide-react";
+import { Heart, Calendar, Users, ArrowRight, Lightbulb, HandHeart, Rocket, Puzzle } from "lucide-react";
 
 export default function Home() {
   return (
@@ -11,7 +11,7 @@ export default function Home() {
           <div className="container mx-auto px-4 h-full flex items-center">
             <div className="max-w-2xl text-white">
               <h1 className="text-5xl font-bold mb-6">Breast Cancer Awareness Month</h1>
-              <p className="text-xl mb-8">Join us this October in raising awareness and supporting those affected by breast cancer. Together, we can make a difference.</p>
+              <p className="text-xl mb-8">Bringing elevated support and care to those on their cancer journey. We celebrate survivors, honor caregivers, and remember those who have earned their wings.</p>
               <Button className="bg-pink-500 hover:bg-pink-600 text-white px-8 py-6 text-lg">
                 Get Involved <ArrowRight className="ml-2" />
               </Button>
@@ -47,7 +47,54 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Main Content */}
+      {/* Vision Section */}
+      <div className="bg-white py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl font-bold mb-6 text-gray-900">Our Vision</h2>
+            <p className="text-xl text-gray-600 leading-relaxed">
+              To create a caring environment and safe place for those affected by cancer. We strive to give hope for a bright future despite the diagnosis, fostering strength and resilience in our community.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Values Section */}
+      <div className="container mx-auto px-4 py-16">
+        <h2 className="text-3xl font-bold mb-12 text-center text-gray-900">Our Values</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <Card className="bg-white shadow-xl">
+            <CardContent className="p-6 text-center">
+              <Lightbulb className="w-12 h-12 text-pink-500 mb-4 mx-auto" />
+              <h3 className="text-xl font-bold mb-2">Creativity</h3>
+              <p className="text-gray-600">Fostering innovative approaches to support and care</p>
+            </CardContent>
+          </Card>
+          <Card className="bg-white shadow-xl">
+            <CardContent className="p-6 text-center">
+              <HandHeart className="w-12 h-12 text-pink-500 mb-4 mx-auto" />
+              <h3 className="text-xl font-bold mb-2">Compassion</h3>
+              <p className="text-gray-600">Leading with empathy and understanding in all we do</p>
+            </CardContent>
+          </Card>
+          <Card className="bg-white shadow-xl">
+            <CardContent className="p-6 text-center">
+              <Rocket className="w-12 h-12 text-pink-500 mb-4 mx-auto" />
+              <h3 className="text-xl font-bold mb-2">Execution</h3>
+              <p className="text-gray-600">Delivering meaningful support and solutions effectively</p>
+            </CardContent>
+          </Card>
+          <Card className="bg-white shadow-xl">
+            <CardContent className="p-6 text-center">
+              <Puzzle className="w-12 h-12 text-pink-500 mb-4 mx-auto" />
+              <h3 className="text-xl font-bold mb-2">Collaboration</h3>
+              <p className="text-gray-600">Working together with others on similar paths</p>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+
+      {/* Support Section */}
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           <div>
@@ -80,9 +127,9 @@ export default function Home() {
       {/* Call to Action */}
       <div className="bg-pink-50 py-20">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6 text-gray-900">Take Action Today</h2>
+          <h2 className="text-4xl font-bold mb-6 text-gray-900">Join Our Mission</h2>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            Whether through donation, volunteering, or spreading awareness, your support makes a difference in the fight against breast cancer.
+            Help us create a caring environment and provide innovative solutions for those affected by cancer. Your support makes a difference in bringing elevated care to those on their cancer journey.
           </p>
           <div className="flex gap-4 justify-center">
             <Button className="bg-pink-500 hover:bg-pink-600 text-white px-8 py-6 text-lg">
