@@ -21,8 +21,16 @@ export default function Home() {
       {/* Hero Section */}
       <section id="home">
       </section>
-      <div className="relative h-[600px] bg-[url('/img/photo.jpeg')] bg-cover bg-center">
-        <div className="absolute inset-0 bg-pink-950/70">
+      <div className="relative h-[600px]">
+  <video
+    className="absolute inset-0 w-full h-full object-cover"
+    src="vid/Comp 5_2.mp4"
+    autoPlay
+    loop
+    muted
+    playsInline
+  />
+        <div className="absolute inset-0 ">
           <div className="container mx-auto px-4 h-full flex items-center">
             <div className="flex flex-col md:flex-row w-full">
               <div className="w-full md:w-1/2 flex justify-center items-center mb-6 md:mb-0">
