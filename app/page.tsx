@@ -147,7 +147,7 @@ export default function Home() {
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="flex flex-col items-center">
-              <a href="https://www.cancer.org" className="block w-[300px] h-[200px] bg-cover bg-center" style={{ backgroundImage: "url('img/AmericanCancerSociety.png')" }}></a>
+              <a href="https://www.cancer.org" className="block w-[300px] h-[200px] bg-cover bg-center" style={{ backgroundImage: "url('img/americanCancerSociety.png')" }}></a>
               <span className="text-black text-sm font-bold text-center mt-2">Breast Cancer Support Group Finder (American Cancer Society)</span>
             </div>
             <div className="flex flex-col items-center">
