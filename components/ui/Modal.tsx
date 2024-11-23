@@ -1,3 +1,4 @@
+'use client';
 import React, { ReactNode } from 'react';
 import { Dialog, DialogContent, DialogOverlay, DialogTitle, DialogDescription } from '@radix-ui/react-dialog';
 import { VisuallyHidden } from '@radix-ui/react-visually-hidden';
