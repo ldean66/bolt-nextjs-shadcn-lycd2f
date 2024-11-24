@@ -8,7 +8,7 @@ import { Heart } from 'lucide-react';
 import DonationAmount from './DonationAmount';
 
 const initialOptions = {
-  "client-id": "YOUR_PAYPAL_CLIENT_ID",
+  clientId: "AaUsTOJv00TrCwWJitCCjcSpCj6kJLTbkOHAjTUXLgRdCb76w8GNK4hC8C4QOxmNYgeFYV31nkTv1-eN",
   currency: "USD",
   intent: "capture",
 };
