@@ -135,7 +135,7 @@ export default function Home() {
       </div>
       <section id="other-support-groups">
       </section>
-      <div className="bg-[#1A2FFA] py-20">
+      <div className="bg-[#01A9FF] py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6 text-white">Other Support Group</h2>
@@ -167,7 +167,7 @@ export default function Home() {
       </div>
       <section id="nutrition">
       </section>
-      <div className="bg-[#1A2FFA] py-20">
+      <div className="bg-[#01A9FF] py-20">
     
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6 text-white">Nutrition</h2>
@@ -191,7 +191,7 @@ export default function Home() {
       </div>
       <section id="medical-help">
       </section>
-      <div className="bg-[#1A2FFA] py-20">
+      <div className="bg-[#01A9FF] py-20">
     
     <div className="max-w-3xl mx-auto text-center">
       <h2 className="text-3xl font-bold mb-6 text-white">Medical Help</h2>
@@ -222,7 +222,7 @@ export default function Home() {
       </div>
       <section id="educational-links">
       </section>
-      <div className="bg-[#1A2FFA] py-20">
+      <div className="bg-[#01A9FF] py-20">
     
     <div className="max-w-3xl mx-auto text-center">
       <h2 className="text-3xl font-bold mb-6 text-white">Educational Links</h2>
@@ -249,7 +249,7 @@ export default function Home() {
       </div>
       <section id="prayer-groups">
       </section>
-      <div className="bg-[#e84393] py-20">
+      <div className="bg-[#01A9FF] py-20">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6 text-white">Prayer Groups </h2>
           <p className="text-xl text-white leading-relaxed text-center">
@@ -278,7 +278,7 @@ export default function Home() {
       </div>
       <section id="financial-assistance">
       </section>
-      <div className="bg-[#1A2FFA] py-20">
+      <div className="bg-[#01A9FF] py-20">
     
     <div className="max-w-3xl mx-auto text-center">
       <h2 className="text-3xl font-bold mb-6 text-white">Financial Assistance</h2>
@@ -318,7 +318,7 @@ export default function Home() {
       </div>
       <section id="prescription-assistance">
       </section>
-      <div className="bg-[#1A2FFA] py-20">
+      <div className="bg-[#01A9FF] py-20">
     
     <div className="max-w-3xl mx-auto text-center">
       <h2 className="text-3xl font-bold mb-6 text-white">Prescription Assistance</h2>

@@ -14,7 +14,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogOverlay className="fixed inset-0 bg-black bg-opacity-50" />
       <DialogContent className="fixed inset-0 flex items-center justify-center">
-        <div className="bg-white rounded-lg shadow-lg p-6 w-full max-w-md">
+        <div className="bg-white rounded-lg shadow-lg p-6 w-full max-w-md h-auto max-h-[90vh] overflow-y-auto">
           <DialogTitle>
             <VisuallyHidden>Modal Title</VisuallyHidden>
           </DialogTitle>
