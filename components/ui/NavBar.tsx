@@ -8,6 +8,7 @@ const navItems = [
   { id: 'about', label: 'About' },
   { id: 'vision', label: 'Our Vision' },
   { id: 'values', label: 'Our Values' },
+  { id: "gallery", label: "Gallery" },
   { id: 'resources', label: 'Resources', sublinks: [
     { id: 'other-support-groups', label: 'Other Support Groups' },
     { id: 'nutrition', label: 'Nutrition' },

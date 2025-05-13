@@ -121,6 +121,62 @@ export default function Home() {
           </Card>
         </div>
       </div>
+      {/* Event Gallery Section */}
+      <section id="gallery" className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-6 text-gray-900 text-center">Event Gallery</h2>
+          <div className="flex space-x-4 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-300">
+            {['eventPhoto.jpeg',
+             'eventPhoto2.jpg',
+             'eventPhoto47.jpg',
+            'eventPhoto48.jpg',
+            'eventPhoto51.jpg',
+             'eventPhoto9.jpg', 
+             'eventPhoto6.jpg',
+             'eventPhoto5.jpg',
+             'eventPhoto7.jpg',
+             'eventPhoto3.jpg',
+              'eventPhoto4.jpg',
+              'eventPhoto31.jpg',
+              'eventPhoto50.jpg',
+              'eventPhoto32.jpg',
+              'eventPhoto13.jpg',
+              'eventPhoto30.jpg',
+              'eventPhoto14.jpg',
+              'eventPhoto15.jpg',
+              'eventPhoto34.jpg',
+              'eventPhoto44.jpg',
+              'eventPhoto45.jpg',
+              'eventPhoto46.jpg',
+              'eventPhoto27.jpg',
+              'eventPhoto26.jpg',
+              'eventPhoto28.jpg',
+              'eventPhoto23.jpg',
+              'eventPhoto38.jpg',
+              'eventPhoto37.jpg',
+              'eventPhoto43.jpg',
+              'eventPhoto42.jpg',
+              'eventPhoto41.jpg',
+              'eventPhoto40.jpg',
+              'eventPhoto17.jpg'].map((file, idx) => (
+              <a
+                key={file}
+                href={`/img/${file}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-shrink-0 w-64 h-48 relative"
+              >
+                <Image
+                  src={`/img/${file}`}
+                  alt={`Event ${idx + 1}`}
+                  fill
+                  className="object-contain rounded-lg"
+                />
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
       <section id="resources">
       </section>
       <div className="bg-[#e84393] py-20">
@@ -145,22 +201,10 @@ export default function Home() {
       <div className="bg-white py-16">
         <div className="container mx-auto px-4">
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        + <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6 justify-items-center">
             <div className="flex flex-col items-center">
               <a href="https://www.cancer.org" className="block w-[300px] h-[200px] bg-cover bg-center" style={{ backgroundImage: "url('img/americanCancerSociety.png')" }}></a>
               <span className="text-black text-sm font-bold text-center mt-2">Breast Cancer Support Group Finder (American Cancer Society)</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <a href="https://www.cancersupportcommunity.org" className="block w-[300px] h-[200px] bg-cover bg-center" style={{ backgroundImage: "url('img/cancerSupportCommunity.png')" }}></a>
-              <span className="text-black text-sm font-bold text-center mt-2">Cancer Support Community</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <a href="https://www.youngsurvival.org" className="block w-[300px] h-[200px] bg-cover bg-center" style={{ backgroundImage: "url('img/youngSurvivalCoalition.png')" }}></a>
-              <span className="text-black text-sm font-bold text-center mt-2">Young Survival Coalition (for younger women)</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <a href="https://www.sistersnetworkinc.org" className="block w-[300px] h-[200px] bg-cover bg-center" style={{ backgroundImage: "url('img/sisters.png')" }}></a>
-              <span className="text-black text-sm font-bold text-center mt-2">Sisters Network Inc. (for African-American women)</span>
             </div>
           </div>
         </div>
