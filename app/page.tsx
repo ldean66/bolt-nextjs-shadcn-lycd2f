@@ -201,7 +201,7 @@ export default function Home() {
       <div className="bg-white py-16">
         <div className="container mx-auto px-4">
           
-        + <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6 justify-items-center">
+         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6 justify-items-center">
             <div className="flex flex-col items-center">
               <a href="https://www.cancer.org" className="block w-[300px] h-[200px] bg-cover bg-center" style={{ backgroundImage: "url('img/americanCancerSociety.png')" }}></a>
               <span className="text-black text-sm font-bold text-center mt-2">Breast Cancer Support Group Finder (American Cancer Society)</span>
