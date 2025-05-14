@@ -133,7 +133,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-6 text-gray-900 text-center">Event Gallery</h2>
           <div className="flex space-x-4 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-300">
-            {['eventPhoto.jpeg',
+            {['previewEventPhoto.jpeg',
              'eventPhoto2.jpg',
              'eventPhoto47.jpg',
              'eventPhoto54.jpeg',
