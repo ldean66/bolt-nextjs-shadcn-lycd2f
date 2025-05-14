@@ -5,7 +5,7 @@ import { Inter } from 'next/font/google';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Breast Cancer Awareness Month - Join the Fight',
+  title: 'Breast Cancer Awareness Movement - Join the Fight',
   description: 'Learn about breast cancer awareness, early detection, and how you can make a difference in the fight against breast cancer.',
 };
 
