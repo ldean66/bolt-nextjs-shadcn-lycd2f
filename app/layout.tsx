@@ -5,8 +5,13 @@ import { Inter } from 'next/font/google';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Breast Cancer Awareness Movement - Join the Fight',
-  description: 'Learn about breast cancer awareness, early detection, and how you can make a difference in the fight against breast cancer.',
+  title: 'More Than Conquerors – Breast Cancer Awareness Movement',
+  description: 'More Than Conquerors: Breast Cancer Awareness Movement empowering women to conquer cancer together.',
+  openGraph: {
+    title: 'More Than Conquerors – Breast Cancer Awareness Movement',
+    description: 'Join the movement: More Than Conquerors supports and uplifts women affected by breast cancer.',
+    images: '/img/MTCLogo_FullColor.png',
+  },
 };
 
 export default function RootLayout({
