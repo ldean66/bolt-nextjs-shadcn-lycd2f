@@ -58,16 +58,29 @@ export default function Home() {
       <div className="max-w-3xl mx-auto text-center">
         <h2 className="text-3xl font-bold mb-6 text-white">About Us</h2>
         <p className="text-xl text-white leading-relaxed text-left">
-          Welcome to More Than Conquerors
+          Welcome to More Than Conquerors.
           Every 14 seconds, somewhere in the world, a woman is diagnosed with breast cancer (Breast Cancer Research Foundation). By 2024, it is estimated that 1 in 8 women in the United States will face this life-changing diagnosis. More Than Conquerors was born out of the understanding that these women need more than just treatment; they need a support system that uplifts, inspires, and empowers them to take control of how they look, feel, and ultimately, live.
-          Founded by Lydia Dean-Reese, a breast cancer conqueror herself, More Than Conquerors is a grassroots organization fueled by passionate women who are committed to giving back and paying it forward. While undergoing her own cancer treatments, Lydia saw firsthand the power of positivity. A fashion designer and stylist by trade, she realized how something as simple as wearing a stylish scarf or receiving a thoughtful gift could transform someone’s outlook. Her personal journey inspired the creation of More Than Conquerors—a space where women are encouraged not just to survive cancer but to conquer it. We are not just survivors, but conquerors, More Than Conquerors. Romans 8:37
+          Founded by Lydia Dean-Reese, a breast cancer conqueror herself, More Than Conquerors is a grassroots organization fueled by passionate women who are committed to giving back and paying it forward. While undergoing her own cancer treatments, Lydia saw firsthand the power of positivity. A fashion designer and stylist by trade, she realized how something as simple as wearing a stylish scarf or receiving a thoughtful gift could transform someone’s outlook. Her personal journey inspired the creation of More Than Conquerors—a space where women are encouraged not just to survive cancer but to conquer it. They are not just survivors, but conquerors, More Than Conquerors. Romans 8:37
         </p>
+        <h3 className="text-2xl  mb-4 mt-10 text-gray">What is Breast Cancer?</h3>
+        <p className="text-lg text-white leading-relaxed">
+  Breast cancer is a disease where cells within the breast tissues grow out of control and form tumors, potentially spreading to other parts of the body. These abnormal cells can originate in the milk ducts or lobules of the breast.
+</p>
       </div>
     </div>
   </div>
 </section>
       <section id="vision">
       </section>
+      {/* Mission Section */}
+<section id="mission" className="bg-gray-50 py-20">
+  <div className="container mx-auto px-4 text-center max-w-3xl">
+    <h2 className="text-3xl font-bold mb-6 text-gray-900">Our Mission</h2>
+    <p className="text-xl text-gray-600 leading-relaxed">
+      Our Mission is to identify and receive referrals of women recently diagnosed or on their journey so we can offer prayer, a care package, and ongoing support in various forms depending on the need.
+    </p>
+  </div>
+</section>
       {/* Vision Section */}
       <div className="bg-white py-20">
         <div className="container mx-auto px-4">
@@ -187,8 +200,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id="resources">
-      </section>
       <div className="bg-[#e84393] py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
@@ -218,6 +229,14 @@ export default function Home() {
             <div className="flex flex-col items-center space-y-4 flex-shrink-0">
               <a href="https://www.cancer.org" className="block w-[300px] h-[200px] bg-cover bg-center" style={{ backgroundImage: "url('img/americanCancerSociety.png')" }}></a>
               <span className="text-black text-sm font-bold text-center">Breast Cancer Support Group Finder (American Cancer Society)</span>
+            </div>
+            <div className="flex flex-col items-center space-y-4 flex-shrink-0">
+              <a href="https://www.cdc.gov/breast-cancer/what-cdc-is-doing/" className="block w-[300px] h-[200px] bg-cover bg-center" style={{ backgroundImage: "url('img/cdc.png')" }}></a>
+              <span className="text-black text-sm font-bold text-center">CDC Breast Cancer</span>
+            </div>
+            <div className="flex flex-col items-center space-y-4 flex-shrink-0">
+              <a href="https://search.nih.gov/search?utf8=✓&affiliate=nih&query=breast+cancer" className="block w-[300px] h-[200px] bg-cover bg-center" style={{ backgroundImage: "url('img/nih.png')" }}></a>
+              <span className="text-black text-sm font-bold text-center">National Institute of Health</span>
             </div>
           </div>
         </div>
@@ -434,6 +453,20 @@ export default function Home() {
       </div>
       <div>
         {/* Other sections/components */}
+        {/* Social Media Section */}
+        <section id="social-media" className="bg-white py-4">
+        <div className="flex flex-nowrap sm:flex-wrap space-x-4 overflow-x-auto pb-4 -mx-4 px-4 sm:px-0 md:justify-center md:overflow-visible md:-mx-0 md:px-0">
+          <div className="flex flex-col items-center space-y-4 flex-shrink-0">
+              <a href="https://facebook.com" className="block w-[150px] h-[100px] bg-cover bg-center" style={{ backgroundImage: "url('img/facebook-white-logo.png')" }}></a>
+            </div>
+            <div className="flex flex-col items-center space-y-4 flex-shrink-0">
+              <a href="https://www.instagram.com/" className="block w-[150px] h-[100px] bg-cover bg-center" style={{ backgroundImage: "url('img/instagram-white-logo.png')" }}></a>
+            </div>
+            <div className="flex flex-col items-center space-y-4 flex-shrink-0">
+              <a href="https://X.com/" className="block w-[150px] h-[100px] bg-cover bg-center" style={{ backgroundImage: "url('img/x-white-logo.png')" }}></a>
+            </div>
+          </div>
+        </section>
         <Footer />
         {/* Other sections/components */}
       </div>
