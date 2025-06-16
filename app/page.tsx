@@ -442,28 +442,67 @@ export default function Home() {
       </div>
 
       {/* Call to Action */}
-      <div className="bg-[#e84393] py-20">
+      <div className="bg-[#e84393] py-12">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6 text-white">Get Involved</h2>
           <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
             Join us in making a difference! There are many ways to support More Than Conquerors and become part of our mission to uplift and empower those affected by breast cancer. Volunteers make the dream work.
           </p>
+        </div>
+      </div>
 
+      {/* In-Kind Gifts Section */}
+      <div className="bg-[#e84393] py-6">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl font-bold mb-6 text-white">In-Kind Gifts</h2>
+            <p className="text-xl text-white leading-relaxed text-left">
+              In addition to monetary donations, other meaningful ways to support include in-kind contributions such as:
+            </p>
+            <ul className="text-xl text-white leading-relaxed text-left list-disc mt-4 ml-6">
+              <li>Inspirational novelty items</li>
+              <li>Scarfs</li>
+              <li>Journals</li>
+              <li>Gift cards (e.g., Uber or Uber Eats)</li>
+            </ul>
+            <p className="text-xl text-white leading-relaxed text-left mt-6">
+              We are a registered 501(c)(3) nonprofit organization, and your gifts help us bring hope and comfort to those in need.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Services Include Section */}
+      <div className="bg-white py-12">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl font-bold mb-6 text-pink-600">Services Include</h2>
+            <ol className="text-xl text-gray-700 leading-relaxed text-left list-decimal ml-6 space-y-2">
+              <li>Provide a cancer Conqueror bag</li>
+              <li>Transportation service to appointments</li>
+              <li>A Conqueror telephone buddy</li>
+              <li>Meal delivery</li>
+              <li>Makeup sessions</li>
+              <li>Style sessions</li>
+              <li>Clerical assistance</li>
+              <li>Thinking of you card</li>
+            </ol>
+          </div>
         </div>
       </div>
       <div>
         {/* Other sections/components */}
         {/* Social Media Section */}
-        <section id="social-media" className="bg-white py-4">
-        <div className="flex flex-nowrap sm:flex-wrap space-x-4 overflow-x-auto pb-4 -mx-4 px-4 sm:px-0 md:justify-center md:overflow-visible md:-mx-0 md:px-0">
+        <section id="social-media" className="bg-white py-6">
+        <div className="flex flex-nowrap sm:flex-wrap space-x-6 overflow-x-auto pb-4 -mx-4 px-4 sm:px-0 md:justify-center md:overflow-visible md:-mx-0 md:px-0">
           <div className="flex flex-col items-center space-y-4 flex-shrink-0">
-              <a href="https://facebook.com" className="block w-[150px] h-[100px] bg-cover bg-center" style={{ backgroundImage: "url('img/facebook-white-logo.png')" }}></a>
+              <a href="https://facebook.com" className="block w-[120px] h-[120px] bg-cover bg-center" style={{ backgroundImage: "url('img/facebook-white-logo.png')" }}></a>
             </div>
             <div className="flex flex-col items-center space-y-4 flex-shrink-0">
-              <a href="https://www.instagram.com/" className="block w-[150px] h-[100px] bg-cover bg-center" style={{ backgroundImage: "url('img/instagram-white-logo.png')" }}></a>
+              <a href="https://www.instagram.com/" className="block w-[120px] h-[120px] bg-contain bg-center bg-no-repeat" style={{ backgroundImage: "url('img/instagram-white-logo.png')" }}></a>
             </div>
             <div className="flex flex-col items-center space-y-4 flex-shrink-0">
-              <a href="https://X.com/" className="block w-[150px] h-[100px] bg-cover bg-center" style={{ backgroundImage: "url('img/x-white-logo.png')" }}></a>
+              <a href="https://X.com/" className="block w-[120px] h-[120px] bg-cover bg-center" style={{ backgroundImage: "url('img/x-white-logo.png')" }}></a>
             </div>
           </div>
         </section>
