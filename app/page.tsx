@@ -496,10 +496,10 @@ export default function Home() {
         <section id="social-media" className="bg-white py-6">
         <div className="flex flex-nowrap sm:flex-wrap space-x-6 overflow-x-auto pb-4 -mx-4 px-4 sm:px-0 md:justify-center md:overflow-visible md:-mx-0 md:px-0">
           <div className="flex flex-col items-center space-y-4 flex-shrink-0">
-              <a href="https://facebook.com" className="block w-[120px] h-[120px] bg-cover bg-center" style={{ backgroundImage: "url('img/facebook-white-logo.png')" }}></a>
+              <a href="https://www.facebook.com/profile.php?id=61575855102903&name=xhp_nt__fb__action__open_user" className="block w-[120px] h-[120px] bg-cover bg-center" style={{ backgroundImage: "url('img/facebook-white-logo.png')" }}></a>
             </div>
             <div className="flex flex-col items-center space-y-4 flex-shrink-0">
-              <a href="https://www.instagram.com/" className="block w-[120px] h-[120px] bg-contain bg-center bg-no-repeat" style={{ backgroundImage: "url('img/instagram-white-logo.png')" }}></a>
+              <a href="https://www.instagram.com/more_than_conquerors25?igsh=MXM3MmZmZHk5Y25zbg%3D%3D" className="block w-[120px] h-[120px] bg-contain bg-center bg-no-repeat" style={{ backgroundImage: "url('img/instagram-white-logo.png')" }}></a>
             </div>
             <div className="flex flex-col items-center space-y-4 flex-shrink-0">
               <a href="https://X.com/" className="block w-[120px] h-[120px] bg-cover bg-center" style={{ backgroundImage: "url('img/x-white-logo.png')" }}></a>
