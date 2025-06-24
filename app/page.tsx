@@ -478,15 +478,16 @@ export default function Home() {
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6 text-pink-600">Services Include</h2>
             <ol className="text-xl text-gray-700 leading-relaxed text-left list-decimal ml-6 space-y-2">
-              <li>Provide a cancer Conqueror bag</li>
+              <li>Providing a cancer Conqueror bag</li>
               <li>Transportation service to appointments</li>
               <li>A Conqueror telephone buddy</li>
-              <li>Meal delivery</li>
+              <li>Meal deliveries</li>
               <li>Makeup sessions</li>
               <li>Style sessions</li>
               <li>Clerical assistance</li>
-              <li>Thinking of you card</li>
+              <li>"Thinking of you" cards</li>
             </ol>
+
           </div>
         </div>
       </div>
