@@ -70,6 +70,19 @@ export default function Home() {
     </div>
   </div>
 </section>
+  <div className="bg-white py-12">
+    <div className="container mx-auto px-4 text-center">
+      <h2 className="text-3xl font-bold text-pink-600 mb-6 animate-bounce">Upcoming Event !!!</h2>
+      <p className="text-lg text-gray-700 mb-6">
+        Join us for our Breast Cancer Awareness Brunch!
+      </p>
+      <img
+        src="/img/octoberEvent.jpeg"
+        alt="Breast Cancer Awareness Brunch Flyer"
+        className="mx-auto w-full max-w-2xl rounded-lg shadow-lg"
+      />
+    </div>
+  </div>
       <section id="vision">
       </section>
       {/* Mission Section */}
