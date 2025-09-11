@@ -81,6 +81,25 @@ export default function Home() {
         alt="Breast Cancer Awareness Brunch Flyer"
         className="mx-auto w-full max-w-2xl rounded-lg shadow-lg"
       />
+      <div className="mt-8 mx-auto max-w-2xl">
+        <a
+          href="https://www.eventbrite.com/e/2025-strut-to-support-breast-cancer-patients-and-caregivers-tickets-1645427731639?aff=oddtdtcreator"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block"
+        >
+          <div className="bg-pink-50 border border-pink-200 rounded-lg p-6 shadow-md hover:shadow-lg transition">
+            <h3 className="text-2xl font-semibold text-pink-600 mb-3 text-center">RSVP / Tickets</h3>
+            <ul className="list-disc pl-6 text-gray-800 space-y-2 text-left">
+              <li>First time guests who are survivors attend Complimentary</li>
+              <li>Returning Survivors $15</li>
+              <li>Supporters $30</li>
+              <li>Donations no amount too small</li>
+            </ul>
+            <p className="mt-4 text-center text-pink-700 underline">Get tickets on Eventbrite</p>
+          </div>
+        </a>
+      </div>
     </div>
   </div>
       <section id="vision">
