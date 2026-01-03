@@ -29,90 +29,51 @@ export default function Home() {
       <section id="home">
       </section>
       <div className="relative h-[600px]">
-  <video
-    className="absolute inset-0 w-full h-full object-cover"
-    src="vid/Comp 5_2.mp4"
-    autoPlay
-    loop
-    muted
-    playsInline
-  />
-  <div className="absolute inset-0">
-    <div className="container mx-auto px-4 h-full flex items-center">
-      <div className="flex flex-col md:flex-row w-full">
-        <div className="w-full md:w-1/2 flex justify-center items-center mb-0 md:mb-0 mt-24 md:mt-0">
-          <img src="/img/MTCLogo_FullColor.png" alt="More Than Conquerors" className="w-[300px] h-[300px] sm:w-[300px] sm:h-[300px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px] mb-0" />
-        </div>
-        <div className="w-full md:w-1/2 text-white text-center md:text-left mt-0 md:mt-24">
-  <h1 className="text-4xl md:text-5xl font-bold mb-4">More Than Conquerors</h1>
-  <p className="text-lg md:text-xl mb-8">You’re not alone. You can face it, move through it, look good while going through it, and conquer it.</p>
-</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<section id="about">
-  <div className="bg-[#e84393] py-20">
-    <div className="container mx-auto px-4">
-      <div className="max-w-3xl mx-auto text-center">
-        <h2 className="text-3xl font-bold mb-6 text-white">About Us</h2>
-        <p className="text-xl text-white leading-relaxed text-left">
-          Welcome to More Than Conquerors.
-          Every 14 seconds, somewhere in the world, a woman is diagnosed with breast cancer (Breast Cancer Research Foundation). By 2024, it is estimated that 1 in 8 women in the United States will face this life-changing diagnosis. More Than Conquerors was born out of the understanding that these women need more than just treatment; they need a support system that uplifts, inspires, and empowers them to take control of how they look, feel, and ultimately, live.
-          Founded by Lydia Dean-Reese, a breast cancer conqueror herself, More Than Conquerors is a grassroots organization fueled by passionate women who are committed to giving back and paying it forward. While undergoing her own cancer treatments, Lydia saw firsthand the power of positivity. A fashion designer and stylist by trade, she realized how something as simple as wearing a stylish scarf or receiving a thoughtful gift could transform someone’s outlook. Her personal journey inspired the creation of More Than Conquerors—a space where women are encouraged not just to survive cancer but to conquer it. They are not just survivors, but conquerors, More Than Conquerors. Romans 8:37
-        </p>
-        <h3 className="text-2xl  mb-4 mt-10 text-gray">What is Breast Cancer?</h3>
-        <p className="text-lg text-white leading-relaxed">
-  Breast cancer is a disease where cells within the breast tissues grow out of control and form tumors, potentially spreading to other parts of the body. These abnormal cells can originate in the milk ducts or lobules of the breast.
-</p>
-      </div>
-    </div>
-  </div>
-</section>
-  <div className="bg-white py-12">
-    <div className="container mx-auto px-4 text-center">
-      <h2 className="text-3xl font-bold text-pink-600 mb-6 animate-bounce">Upcoming Event !!!</h2>
-      <p className="text-lg text-gray-700 mb-6">
-        Join us for our Breast Cancer Awareness Brunch!
-      </p>
-      <img
-        src="/img/octoberEvent.jpeg"
-        alt="Breast Cancer Awareness Brunch Flyer"
-        className="mx-auto w-full max-w-2xl rounded-lg shadow-lg"
-      />
-      <div className="mt-8 mx-auto max-w-2xl">
-        <a
-          href="https://www.eventbrite.com/e/2025-strut-to-support-breast-cancer-patients-and-caregivers-tickets-1645427731639?aff=oddtdtcreator"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block"
-        >
-          <div className="bg-pink-50 border border-pink-200 rounded-lg p-6 shadow-md hover:shadow-lg transition">
-            <h3 className="text-2xl font-semibold text-pink-600 mb-3 text-center">RSVP / Tickets</h3>
-            <ul className="list-disc pl-6 text-gray-800 space-y-2 text-left">
-              <li>First time guests who are survivors attend Complimentary</li>
-              <li>Returning Survivors $15</li>
-              <li>Supporters $30</li>
-              <li>Donations no amount too small</li>
-            </ul>
-            <p className="mt-4 text-center text-pink-700 underline">Get tickets on Eventbrite</p>
+        <video
+          className="absolute inset-0 w-full h-full object-cover"
+          src="vid/Comp 5_2.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+        />
+        <div className="absolute inset-0">
+          <div className="container mx-auto px-4 h-full flex items-center">
+            <div className="flex flex-col md:flex-row w-full">
+              <div className="w-full md:w-1/2 flex justify-center items-center mb-0 md:mb-0 mt-24 md:mt-0">
+                <img src="/img/MTCLogo_FullColor.png" alt="More Than Conquerors" className="w-[300px] h-[300px] sm:w-[300px] sm:h-[300px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px] mb-0" />
+              </div>
+              <div className="w-full md:w-1/2 text-white text-center md:text-left mt-0 md:mt-24">
+                <h1 className="text-4xl md:text-5xl font-bold mb-4">More Than Conquerors</h1>
+                <p className="text-lg md:text-xl mb-8">More than Conquerors exist to educate and support, patients survivors, caregivers, and their families affected by breast cancer.</p>
+              </div>
+            </div>
           </div>
-        </a>
+        </div>
       </div>
-    </div>
-  </div>
+
+      <section id="about">
+        <div className="bg-[#e84393] py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto text-center">
+              <h2 className="text-3xl font-bold mb-6 text-white">About Us</h2>
+              <p className="text-xl text-white leading-relaxed text-left">
+                Welcome to More Than Conquerors.
+                Every 14 seconds, somewhere in the world, a woman is diagnosed with breast cancer (Breast Cancer Research Foundation). By 2024, it is estimated that 1 in 8 women in the United States will face this life-changing diagnosis. More Than Conquerors was born out of the understanding that these women need more than just treatment; they need a support system that uplifts, inspires, and empowers them to take control of how they look, feel, and ultimately, live.
+                Founded by Lydia Dean-Reese, a breast cancer conqueror herself, More Than Conquerors is a grassroots organization fueled by passionate women who are committed to giving back and paying it forward. While undergoing her own cancer treatments, Lydia saw firsthand the power of positivity. A fashion designer and stylist by trade, she realized how something as simple as wearing a stylish scarf or receiving a thoughtful gift could transform someone’s outlook. Her personal journey inspired the creation of More Than Conquerors—a space where women are encouraged not just to survive cancer but to conquer it. They are not just survivors, but conquerors, More Than Conquerors. Romans 8:37
+              </p>
+              <h3 className="text-2xl  mb-4 mt-10 text-gray">What is Breast Cancer?</h3>
+              <p className="text-lg text-white leading-relaxed">
+                Breast cancer is a disease where cells within the breast tissues grow out of control and form tumors, potentially spreading to other parts of the body. These abnormal cells can originate in the milk ducts or lobules of the breast.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
       <section id="vision">
       </section>
       {/* Mission Section */}
-<section id="mission" className="bg-gray-50 py-20">
-  <div className="container mx-auto px-4 text-center max-w-3xl">
-    <h2 className="text-3xl font-bold mb-6 text-gray-900">Our Mission</h2>
-    <p className="text-xl text-gray-600 leading-relaxed">
-      Our Mission is to identify and receive referrals of women recently diagnosed or on their journey so we can offer prayer, a care package, and ongoing support in various forms depending on the need.
-    </p>
-  </div>
-</section>
+      
       {/* Vision Section */}
       <div className="bg-white py-20">
         <div className="container mx-auto px-4">
@@ -167,30 +128,44 @@ export default function Home() {
         </div>
       </div>
       <section id="support">
-      <div>
-        {/* Other sections/components */}
-        <SupportSection />
-        {/* Other sections/components */}
-      </div>
+        <div>
+          {/* Other sections/components */}
+          <SupportSection />
+          {/* Other sections/components */}
+        </div>
       </section>
       {/* Event Gallery Section */}
       <section id="gallery" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-6 text-gray-900 text-center">Event Gallery</h2>
           <div className="flex space-x-4 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-300">
-            {['previewEventPhoto.jpeg',
-             'eventPhoto2.jpg',
-             'eventPhoto47.jpg',
-             'eventPhoto54.jpeg',
-            'eventPhoto48.jpg',
-            'eventPhoto51.jpg',
-             'eventPhoto9.jpg', 
-             'eventPhoto52.jpg', 
-             'eventPhoto53.jpg', 
-             'eventPhoto6.jpg',
-             'eventPhoto5.jpg',
-             'eventPhoto7.jpg',
-             'eventPhoto3.jpg',
+            {['octoberEventPoster.jpeg',
+              'previewEventPhoto.jpeg',
+              'eventPhoto55.JPG',
+              'eventPhoto56.JPEG',
+              'eventPhoto57.jpg',
+              'eventPhoto58.JPEG',
+              'eventPhoto59.jpeg',
+              'eventPhoto60.jpeg',
+              'eventPhoto61.jpeg',
+              'eventPhoto62.jpeg',
+              'eventPhoto63.jpeg',
+              'eventPhoto64.jpeg',
+              'eventPhoto65.jpeg',
+              'eventPhoto66.jpeg',
+              'eventPhoto67.jpeg',
+              'eventPhoto54.jpeg',
+              'eventPhoto2.jpg',
+              'eventPhoto47.jpg',
+              'eventPhoto48.jpg',
+              'eventPhoto51.jpg',
+              'eventPhoto9.jpg',
+              'eventPhoto52.jpg',
+              'eventPhoto53.jpg',
+              'eventPhoto6.jpg',
+              'eventPhoto5.jpg',
+              'eventPhoto7.jpg',
+              'eventPhoto3.jpg',
               'eventPhoto4.jpg',
               'eventPhoto31.jpg',
               'eventPhoto50.jpg',
@@ -214,21 +189,21 @@ export default function Home() {
               'eventPhoto41.jpg',
               'eventPhoto40.jpg',
               'eventPhoto17.jpg'].map((file, idx) => (
-              <a
-                key={file}
-                href={`/img/${file}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-shrink-0 w-64 h-48 relative"
-              >
-                <Image
-                  src={`/img/${file}`}
-                  alt={`Event ${idx + 1}`}
-                  fill
-                  className="object-contain rounded-lg"
-                />
-              </a>
-            ))}
+                <a
+                  key={file}
+                  href={`/img/${file}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-shrink-0 w-64 h-48 relative"
+                >
+                  <Image
+                    src={`/img/${file}`}
+                    alt={`Event ${idx + 1}`}
+                    fill
+                    className="object-contain rounded-lg"
+                  />
+                </a>
+              ))}
           </div>
         </div>
       </section>
@@ -248,7 +223,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6 text-white">Other Support Group</h2>
-           </div>
+          </div>
         </div>
       </div>
       <div className="bg-white py-16">
@@ -276,14 +251,14 @@ export default function Home() {
       <section id="nutrition">
       </section>
       <div className="bg-[#01A9FF] py-20">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6 text-white">Nutrition</h2>
-           </div>
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-6 text-white">Nutrition</h2>
         </div>
-     
+      </div>
+
       <div className="bg-white py-16">
         <div className="container mx-auto px-4">
-         
+
           <div className="flex space-x-6 overflow-x-auto pb-4 -mx-4 px-4 sm:px-0 md:justify-center md:overflow-visible md:-mx-0 md:px-0">
             <div className="flex flex-col items-center space-y-4 flex-shrink-0">
               <a href="https://www.oncologynutrition.org/home" className="block w-[300px] h-[200px] bg-cover bg-center" style={{ backgroundImage: "url('img/oncologyNutrition.png')" }}></a>
@@ -299,14 +274,14 @@ export default function Home() {
       <section id="medical-help">
       </section>
       <div className="bg-[#01A9FF] py-20">
-    
-    <div className="max-w-3xl mx-auto text-center">
-      <h2 className="text-3xl font-bold mb-6 text-white">Medical Help</h2>
-     </div>
-  </div>
+
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-6 text-white">Medical Help</h2>
+        </div>
+      </div>
       <div className="bg-white py-16">
         <div className="container mx-auto px-4">
-        
+
           <div className="flex flex-nowrap sm:flex-wrap space-x-6 overflow-x-auto pb-4 -mx-4 px-4 sm:px-0 md:justify-center md:overflow-visible md:-mx-0 md:px-0">
             <div className="flex flex-col items-center space-y-4 flex-shrink-0">
               <a href="https://www.hopkinsmedicine.org/kimmel-cancer-center" className="block w-[300px] h-[200px] bg-cover bg-center" style={{ backgroundImage: "url('img/johnHopkins.png')" }}></a>
@@ -326,14 +301,14 @@ export default function Home() {
       <section id="educational-links">
       </section>
       <div className="bg-[#01A9FF] py-20">
-    
-    <div className="max-w-3xl mx-auto text-center">
-      <h2 className="text-3xl font-bold mb-6 text-white">Educational Links</h2>
-     </div>
-  </div>
+
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-6 text-white">Educational Links</h2>
+        </div>
+      </div>
       <div className="bg-white py-16">
         <div className="container mx-auto px-4">
-        
+
           <div className="flex space-x-6 overflow-x-auto pb-4 -mx-4 px-4 sm:px-0 md:justify-center md:overflow-visible md:-mx-0 md:px-0">
             <div className="flex flex-col items-center space-y-4 flex-shrink-0">
               <a href="https://www.breastcancer.org" className="block w-[300px] h-[200px] bg-cover bg-center" style={{ backgroundImage: "url('img/breastCancerOrg.png')" }}></a>
@@ -378,18 +353,18 @@ export default function Home() {
       <section id="financial-assistance">
       </section>
       <div className="bg-[#01A9FF] py-20">
-    
-    <div className="max-w-3xl mx-auto text-center">
-      <h2 className="text-3xl font-bold mb-6 text-white">Financial Assistance</h2>
-      <p className="text-xl text-white leading-relaxed text-center">
+
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-6 text-white">Financial Assistance</h2>
+          <p className="text-xl text-white leading-relaxed text-center">
             Cancer treatment can be costly. Some of these organizations may provide financial aid to patients and their families:
           </p>
-     </div>
-  </div>
+        </div>
+      </div>
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center">
-       
-          
+
+
         </div>
       </div>
       <div className="bg-white py-16">
@@ -414,15 +389,15 @@ export default function Home() {
       <section id="prescription-assistance">
       </section>
       <div className="bg-[#01A9FF] py-20">
-    
-    <div className="max-w-3xl mx-auto text-center">
-      <h2 className="text-3xl font-bold mb-6 text-white">Prescription Assistance</h2>
-      <p className="text-xl text-white leading-relaxed text-center">
-      For help covering medication costs, consider these resources:
+
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-6 text-white">Prescription Assistance</h2>
+          <p className="text-xl text-white leading-relaxed text-center">
+            For help covering medication costs, consider these resources:
           </p>
-     </div>
-  </div>
-      
+        </div>
+      </div>
+
       <div className="bg-white py-16">
         <div className="container mx-auto px-4">
 
@@ -525,25 +500,11 @@ export default function Home() {
       </div>
       <div>
         {/* Other sections/components */}
-        {/* Social Media Section */}
-        <section id="social-media" className="bg-white py-6">
-        <div className="flex flex-nowrap sm:flex-wrap space-x-6 overflow-x-auto pb-4 -mx-4 px-4 sm:px-0 md:justify-center md:overflow-visible md:-mx-0 md:px-0">
-          <div className="flex flex-col items-center space-y-4 flex-shrink-0">
-              <a href="https://www.facebook.com/profile.php?id=61575855102903&name=xhp_nt__fb__action__open_user" className="block w-[120px] h-[120px] bg-cover bg-center" style={{ backgroundImage: "url('img/facebook-white-logo.png')" }}></a>
-            </div>
-            <div className="flex flex-col items-center space-y-4 flex-shrink-0">
-              <a href="https://www.instagram.com/more_than_conquerors25?igsh=MXM3MmZmZHk5Y25zbg%3D%3D" className="block w-[120px] h-[120px] bg-contain bg-center bg-no-repeat" style={{ backgroundImage: "url('img/instagram-white-logo.png')" }}></a>
-            </div>
-            <div className="flex flex-col items-center space-y-4 flex-shrink-0">
-              <a href="https://X.com/" className="block w-[120px] h-[120px] bg-cover bg-center" style={{ backgroundImage: "url('img/x-white-logo.png')" }}></a>
-            </div>
-          </div>
-        </section>
         <Footer />
         {/* Other sections/components */}
       </div>
-      </main>
-      
+    </main>
+
     </>
   );
 }

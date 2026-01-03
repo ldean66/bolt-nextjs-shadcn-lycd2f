@@ -1,6 +1,6 @@
 'use client';
 
-import { Facebook, Twitter, Instagram, Youtube, Heart } from 'lucide-react';
+import { Facebook, Twitter, Instagram, Youtube } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export default function Footer() {
@@ -8,22 +8,6 @@ export default function Footer() {
 
   return (
     <footer className="bg-[#2f3640] text-white">
-      {/* Donation Banner */}
-      <div className="bg-[#e84393] py-6">
-        <div className="max-w-6xl mx-auto px-4 text-center">
-          <div className="flex flex-col md:flex-row items-center justify-center gap-4">
-            <Heart className="w-8 h-8 animate-pulse" />
-            <h3 className="text-xl font-semibold">Make a difference today!</h3>
-            <Button 
-              variant="secondary" 
-              className="bg-white text-[#e84393] hover:bg-gray-100"
-            >
-              Donate Now
-            </Button>
-          </div>
-        </div>
-      </div>
-
       {/* Main Footer Content */}
       <div className="max-w-6xl mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -67,16 +51,32 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Connect With Us</h4>
             <div className="flex space-x-4 mb-6">
-              <a href="#" className="hover:text-[#e84393] transition-colors">
+              <a
+                href="https://www.facebook.com/profile.php?id=61575855102903&name=xhp_nt__fb__action__open_user"
+                className="hover:text-[#e84393] transition-colors"
+                aria-label="Facebook"
+              >
                 <Facebook className="w-6 h-6" />
               </a>
-              <a href="#" className="hover:text-[#e84393] transition-colors">
+              <a
+                href="https://x.com/"
+                className="hover:text-[#e84393] transition-colors"
+                aria-label="X"
+              >
                 <Twitter className="w-6 h-6" />
               </a>
-              <a href="#" className="hover:text-[#e84393] transition-colors">
+              <a
+                href="https://www.instagram.com/more_than_conquerors25?igsh=MXM3MmZmZHk5Y25zbg%3D%3D"
+                className="hover:text-[#e84393] transition-colors"
+                aria-label="Instagram"
+              >
                 <Instagram className="w-6 h-6" />
               </a>
-              <a href="#" className="hover:text-[#e84393] transition-colors">
+              <a
+                href="#"
+                className="hover:text-[#e84393] transition-colors"
+                aria-label="YouTube"
+              >
                 <Youtube className="w-6 h-6" />
               </a>
             </div>

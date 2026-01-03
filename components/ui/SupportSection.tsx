@@ -118,6 +118,15 @@ const SupportSection = () => {
             <Card className="p-8 bg-white dark:bg-gray-800 shadow-xl rounded-2xl">
               <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Make a Donation</h2>
               <PayPalButton />
+              <div className="mt-6 rounded-xl border border-pink-200 bg-pink-50 p-4">
+                <h3 className="text-lg font-semibold text-pink-700 text-center">Zelle Alternative</h3>
+                <p className="text-sm text-gray-600 text-center mt-1">Scan to donate via Zelle</p>
+                <img
+                  src="/img/mtcQR.PNG"
+                  alt="Zelle QR code"
+                  className="mt-3 w-full max-w-xs mx-auto rounded-lg border border-pink-200 shadow-sm"
+                />
+              </div>
               <p className="mt-6 text-sm text-gray-500 dark:text-gray-400 text-center">
                 All donations are secure and encrypted. You can choose to make this a monthly donation 
                 during the PayPal checkout process.
