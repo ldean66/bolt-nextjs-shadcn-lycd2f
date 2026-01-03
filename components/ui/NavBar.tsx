@@ -246,7 +246,7 @@ export default function NavBar() {
                 <h3 className="text-lg font-semibold text-pink-700 text-center">Zelle Alternative</h3>
                 <p className="text-sm text-gray-600 text-center mt-1">Scan to donate via Zelle</p>
                 <img
-                  src="/img/mtcQR.PNG"
+                  src="/img/mtcQR.png"
                   alt="Zelle QR code"
                   className="mt-3 w-full max-w-xs mx-auto rounded-lg border border-pink-200 shadow-sm"
                 />

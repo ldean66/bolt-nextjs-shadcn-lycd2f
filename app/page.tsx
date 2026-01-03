@@ -141,10 +141,10 @@ export default function Home() {
           <div className="flex space-x-4 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-300">
             {['octoberEventPoster.jpeg',
               'previewEventPhoto.jpeg',
-              'eventPhoto55.JPG',
-              'eventPhoto56.JPEG',
+              'eventPhoto55.jpg',
+              'eventPhoto56.jpeg',
               'eventPhoto57.jpg',
-              'eventPhoto58.JPEG',
+              'eventPhoto58.jpeg',
               'eventPhoto59.jpeg',
               'eventPhoto60.jpeg',
               'eventPhoto61.jpeg',
@@ -196,10 +196,12 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="flex-shrink-0 w-64 h-48 relative"
                 >
+                  {/* Performance plan: convert thumbs to WebP/AVIF later; keep originals for downloads. */}
                   <Image
-                    src={`/img/${file}`}
+                    src={`/img/thumbs/${file}`}
                     alt={`Event ${idx + 1}`}
                     fill
+                    sizes="(max-width: 640px) 70vw, 256px"
                     className="object-contain rounded-lg"
                   />
                 </a>
