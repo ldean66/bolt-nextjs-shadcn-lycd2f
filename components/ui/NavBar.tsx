@@ -10,6 +10,7 @@ import PayPalButton from './PayPalButton';
 const navItems = [
   { id: 'home', label: 'Home' },
   { id: 'about', label: 'About' },
+  { id: 'education', label: 'Education & Facts' },
   { id: 'vision', label: 'Our Vision' },
   { id: 'values', label: 'Our Values' },
   { id: "gallery", label: "Gallery" },

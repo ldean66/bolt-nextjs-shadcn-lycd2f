@@ -4,26 +4,34 @@ import Footer from '@/components/ui/Footer';
 import { Card, CardContent } from "@/components/ui/card";
 import TestimonialsSection from '@/components/ui/TestimonialsSection';
 import SupportSection from '@/components/ui/SupportSection';
-import { Heart, Calendar, Users, ArrowRight, Lightbulb, HandHeart, Rocket, Puzzle } from "lucide-react";
+import { BookOpen, HeartPulse, Lightbulb, HandHeart, Rocket, Puzzle } from "lucide-react";
 import Image from 'next/image';
-const placeholderSections = [
-  { id: 'home', title: 'Welcome Home', bgColor: 'bg-blue-50' },
-  { id: 'about', title: 'About Us', bgColor: 'bg-green-50' },
-  { id: 'values', title: 'Our Values', bgColor: 'bg-yellow-50' },
-  { id: 'resources', title: 'Resources', bgColor: 'bg-purple-50' },
-  { id: 'other-support-groups', title: 'Other Support Groups', bgColor: 'bg-purple-100' },
-  { id: 'nutrition', title: 'Nutrition', bgColor: 'bg-purple-200' },
-  { id: 'medical-help', title: 'Medical Help', bgColor: 'bg-purple-300' },
-  { id: 'educational-links', title: 'Educational Links', bgColor: 'bg-purple-400' },
-  { id: 'prayer-groups', title: 'Prayer Groups', bgColor: 'bg-purple-500' },
-  { id: 'financial-assistance', title: 'Financial Assistance', bgColor: 'bg-purple-600' },
-  { id: 'prescription-assistance', title: 'Prescription Assistance', bgColor: 'bg-purple-700' },
-  { id: 'testimonials', title: 'Testimonials', bgColor: 'bg-pink-50' },
-  { id: 'support', title: 'Support', bgColor: 'bg-pink-50' },
-];
+import Script from "next/script";
+
 export default function Home() {
   return (
     <><main className="min-h-screen bg-gradient-to-b from-pink-50 to-white">
+
+{/* SEO Script */}
+<Script
+  id="ld-nonprofit-org"
+  type="application/ld+json"
+  strategy="afterInteractive"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "NonprofitOrganization",
+      name: "More Than Conquerors",
+      url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://morethan-conquerors.com",
+      logo: `${process.env.NEXT_PUBLIC_SITE_URL ?? "https://morethan-conquerors.com"}/img/MTCLogo_FullColor.png`,
+      sameAs: [
+        "https://www.facebook.com/profile.php?id=61575855102903&name=xhp_nt__fb__action__open_user",
+        "https://www.instagram.com/more_than_conquerors25?igsh=MXM3MmZmZHk5Y25zbg%3D%3D",
+      ],
+    }),
+  }}
+/>
+
       <NavBar />
       {/* Hero Section */}
       <section id="home">
@@ -41,7 +49,14 @@ export default function Home() {
           <div className="container mx-auto px-4 h-full flex items-center">
             <div className="flex flex-col md:flex-row w-full">
               <div className="w-full md:w-1/2 flex justify-center items-center mb-0 md:mb-0 mt-24 md:mt-0">
-                <img src="/img/MTCLogo_FullColor.png" alt="More Than Conquerors" className="w-[300px] h-[300px] sm:w-[300px] sm:h-[300px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px] mb-0" />
+                <Image
+                  src="/img/MTCLogo_FullColor.png"
+                  alt="More Than Conquerors logo"
+                  width={500}
+                  height={500}
+                  priority
+                  className="w-[300px] h-[300px] sm:w-[300px] sm:h-[300px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px] mb-0"
+                />
               </div>
               <div className="w-full md:w-1/2 text-white text-center md:text-left mt-0 md:mt-24">
                 <h1 className="text-4xl md:text-5xl font-bold mb-4">More Than Conquerors</h1>
@@ -70,12 +85,164 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id="vision">
-      </section>
+      <section id="education" className="bg-white py-20">
+  <div className="container mx-auto px-4">
+    <div className="max-w-5xl mx-auto">
+      <h2 className="text-3xl font-bold text-gray-900 text-center">Education & Facts</h2>
+      <p className="mt-4 text-lg text-gray-600 text-center">
+        Breast cancer awareness starts with reliable information. Here are key U.S. statistics and a quick overview of
+        common breast cancer types.
+      </p>
+
+      <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <Card className="group relative overflow-hidden rounded-2xl border border-pink-100/70 bg-white/90 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl before:absolute before:-right-16 before:-top-16 before:h-48 before:w-48 before:rounded-full before:bg-pink-200/40 before:blur-2xl before:content-[''] before:opacity-50 before:transition-opacity before:duration-300 group-hover:before:opacity-80 after:absolute after:-left-16 after:-bottom-16 after:h-48 after:w-48 after:rounded-full after:bg-purple-200/30 after:blur-2xl after:content-[''] after:opacity-40 after:transition-opacity after:duration-300 group-hover:after:opacity-70">
+          <CardContent className="relative p-6">
+            <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-pink-500 via-fuchsia-500 to-purple-500" />
+            <div className="flex items-center gap-3">
+              <HeartPulse className="h-6 w-6 text-pink-600" />
+              <h3 className="text-lg font-semibold text-gray-900">Second-leading cause</h3>
+            </div>
+            <p className="mt-3 text-gray-600">
+              Breast cancer is the second leading cause of cancer death in women in the U.S.
+            </p>
+          </CardContent>
+        </Card>
+
+        <Card className="group relative overflow-hidden rounded-2xl border border-pink-100/70 bg-white/90 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl before:absolute before:-right-16 before:-top-16 before:h-48 before:w-48 before:rounded-full before:bg-pink-200/40 before:blur-2xl before:content-[''] before:opacity-50 before:transition-opacity before:duration-300 group-hover:before:opacity-80 after:absolute after:-left-16 after:-bottom-16 after:h-48 after:w-48 after:rounded-full after:bg-purple-200/30 after:blur-2xl after:content-[''] after:opacity-40 after:transition-opacity after:duration-300 group-hover:after:opacity-70">
+          <CardContent className="relative p-6">
+            <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-pink-500 via-fuchsia-500 to-purple-500" />
+            <div className="flex items-center gap-3">
+              <BookOpen className="h-6 w-6 text-pink-600" />
+              <h3 className="text-lg font-semibold text-gray-900">Early detection matters</h3>
+            </div>
+            <p className="mt-3 text-gray-600">
+              When diagnosed at an early, localized stage, the 5-year relative survival rate is about 99%.
+            </p>
+          </CardContent>
+        </Card>
+
+        <Card className="group relative overflow-hidden rounded-2xl border border-pink-100/70 bg-white/90 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl before:absolute before:-right-16 before:-top-16 before:h-48 before:w-48 before:rounded-full before:bg-pink-200/40 before:blur-2xl before:content-[''] before:opacity-50 before:transition-opacity before:duration-300 group-hover:before:opacity-80 after:absolute after:-left-16 after:-bottom-16 after:h-48 after:w-48 after:rounded-full after:bg-purple-200/30 after:blur-2xl after:content-[''] after:opacity-40 after:transition-opacity after:duration-300 group-hover:after:opacity-70">
+          <CardContent className="relative p-6">
+            <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-pink-500 via-fuchsia-500 to-purple-500" />
+            <div className="flex items-center gap-3">
+              <HeartPulse className="h-6 w-6 text-pink-600" />
+              <h3 className="text-lg font-semibold text-gray-900">Many cases are localized</h3>
+            </div>
+            <p className="mt-3 text-gray-600">
+              About 66% of breast cancer cases are diagnosed at a localized stage.
+            </p>
+          </CardContent>
+        </Card>
+
+        <Card className="group relative overflow-hidden rounded-2xl border border-pink-100/70 bg-white/90 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl before:absolute before:-right-16 before:-top-16 before:h-48 before:w-48 before:rounded-full before:bg-pink-200/40 before:blur-2xl before:content-[''] before:opacity-50 before:transition-opacity before:duration-300 group-hover:before:opacity-80 after:absolute after:-left-16 after:-bottom-16 after:h-48 after:w-48 after:rounded-full after:bg-purple-200/30 after:blur-2xl after:content-[''] after:opacity-40 after:transition-opacity after:duration-300 group-hover:after:opacity-70">
+          <CardContent className="relative p-6">
+            <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-pink-500 via-fuchsia-500 to-purple-500" />
+            <div className="flex items-center gap-3">
+              <BookOpen className="h-6 w-6 text-pink-600" />
+              <h3 className="text-lg font-semibold text-gray-900">2025 U.S. estimates</h3>
+            </div>
+            <p className="mt-3 text-gray-600">
+              In 2025, an estimated 316,950 new cases of invasive breast cancer will be diagnosed in women in the U.S.,
+              and about 42,170 women are expected to die from breast cancer.
+            </p>
+          </CardContent>
+        </Card>
+
+        <Card className="group relative overflow-hidden rounded-2xl border border-pink-100/70 bg-white/90 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl before:absolute before:-right-16 before:-top-16 before:h-48 before:w-48 before:rounded-full before:bg-pink-200/40 before:blur-2xl before:content-[''] before:opacity-50 before:transition-opacity before:duration-300 group-hover:before:opacity-80 after:absolute after:-left-16 after:-bottom-16 after:h-48 after:w-48 after:rounded-full after:bg-purple-200/30 after:blur-2xl after:content-[''] after:opacity-40 after:transition-opacity after:duration-300 group-hover:after:opacity-70">
+          <CardContent className="relative p-6">
+            <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-pink-500 via-fuchsia-500 to-purple-500" />
+            <div className="flex items-center gap-3">
+              <HeartPulse className="h-6 w-6 text-pink-600" />
+              <h3 className="text-lg font-semibold text-gray-900">Survivorship</h3>
+            </div>
+            <p className="mt-3 text-gray-600">
+              There are over 4 million breast cancer survivors in the United States.
+            </p>
+          </CardContent>
+        </Card>
+
+        <Card className="group relative overflow-hidden rounded-2xl border border-pink-100/70 bg-white/90 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl before:absolute before:-right-16 before:-top-16 before:h-48 before:w-48 before:rounded-full before:bg-pink-200/40 before:blur-2xl before:content-[''] before:opacity-50 before:transition-opacity before:duration-300 group-hover:before:opacity-80 after:absolute after:-left-16 after:-bottom-16 after:h-48 after:w-48 after:rounded-full after:bg-purple-200/30 after:blur-2xl after:content-[''] after:opacity-40 after:transition-opacity after:duration-300 group-hover:after:opacity-70">
+          <CardContent className="relative p-6">
+            <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-pink-500 via-fuchsia-500 to-purple-500" />
+            <div className="flex items-center gap-3">
+              <HeartPulse className="h-6 w-6 text-pink-600" />
+              <h3 className="text-lg font-semibold text-gray-900">Men can get breast cancer</h3>
+            </div>
+            <p className="mt-3 text-gray-600">
+              In 2025, about 2,800 men will be diagnosed and about 510 will die from breast cancer in the U.S.
+            </p>
+          </CardContent>
+        </Card>
+      </div>
+
+      <div className="mt-14">
+        <h3 className="text-2xl font-bold text-gray-900 text-center">Common Types of Breast Cancer</h3>
+        <p className="mt-4 text-gray-600 text-center">
+          Breast cancers are often categorized by where they start (ducts or lobules) and whether they are invasive.
+        </p>
+
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+          <Card className="group relative overflow-hidden rounded-2xl border border-pink-100/70 bg-white/90 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl before:absolute before:-right-16 before:-top-16 before:h-48 before:w-48 before:rounded-full before:bg-pink-200/40 before:blur-2xl before:content-[''] before:opacity-50 before:transition-opacity before:duration-300 group-hover:before:opacity-80 after:absolute after:-left-16 after:-bottom-16 after:h-48 after:w-48 after:rounded-full after:bg-purple-200/30 after:blur-2xl after:content-[''] after:opacity-40 after:transition-opacity after:duration-300 group-hover:after:opacity-70">
+            <CardContent className="relative p-6">
+              <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-pink-500 via-fuchsia-500 to-purple-500" />
+              <h4 className="text-lg font-semibold text-gray-900">Ductal Carcinoma In Situ (DCIS)</h4>
+              <p className="mt-2 text-gray-600">
+                Non-invasive cancer found in the milk ducts (often described as Stage 0).
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="group relative overflow-hidden rounded-2xl border border-pink-100/70 bg-white/90 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl before:absolute before:-right-16 before:-top-16 before:h-48 before:w-48 before:rounded-full before:bg-pink-200/40 before:blur-2xl before:content-[''] before:opacity-50 before:transition-opacity before:duration-300 group-hover:before:opacity-80 after:absolute after:-left-16 after:-bottom-16 after:h-48 after:w-48 after:rounded-full after:bg-purple-200/30 after:blur-2xl after:content-[''] after:opacity-40 after:transition-opacity after:duration-300 group-hover:after:opacity-70">
+            <CardContent className="relative p-6">
+              <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-pink-500 via-fuchsia-500 to-purple-500" />
+              <h4 className="text-lg font-semibold text-gray-900">Invasive Ductal Carcinoma (IDC)</h4>
+              <p className="mt-2 text-gray-600">
+                The most common type of invasive breast cancer, starting in the ducts and spreading to nearby tissue.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="group relative overflow-hidden rounded-2xl border border-pink-100/70 bg-white/90 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl before:absolute before:-right-16 before:-top-16 before:h-48 before:w-48 before:rounded-full before:bg-pink-200/40 before:blur-2xl before:content-[''] before:opacity-50 before:transition-opacity before:duration-300 group-hover:before:opacity-80 after:absolute after:-left-16 after:-bottom-16 after:h-48 after:w-48 after:rounded-full after:bg-purple-200/30 after:blur-2xl after:content-[''] after:opacity-40 after:transition-opacity after:duration-300 group-hover:after:opacity-70">
+            <CardContent className="relative p-6">
+              <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-pink-500 via-fuchsia-500 to-purple-500" />
+              <h4 className="text-lg font-semibold text-gray-900">Invasive Lobular Carcinoma (ILC)</h4>
+              <p className="mt-2 text-gray-600">
+                Starts in the milk-producing glands (lobules) and can spread to surrounding breast tissue.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="group relative overflow-hidden rounded-2xl border border-pink-100/70 bg-white/90 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl before:absolute before:-right-16 before:-top-16 before:h-48 before:w-48 before:rounded-full before:bg-pink-200/40 before:blur-2xl before:content-[''] before:opacity-50 before:transition-opacity before:duration-300 group-hover:before:opacity-80 after:absolute after:-left-16 after:-bottom-16 after:h-48 after:w-48 after:rounded-full after:bg-purple-200/30 after:blur-2xl after:content-[''] after:opacity-40 after:transition-opacity after:duration-300 group-hover:after:opacity-70">
+            <CardContent className="relative p-6">
+              <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-pink-500 via-fuchsia-500 to-purple-500" />
+              <div className="flex items-center gap-3">
+                <BookOpen className="h-6 w-6 text-pink-600" />
+                <h4 className="text-lg font-semibold text-gray-900">Key Subtypes & Classifications</h4>
+              </div>
+              <ul className="mt-2 text-gray-600 list-disc ml-5 space-y-1">
+                <li><span className="font-semibold">HER2-positive</span>: cancer cells have too much HER2 protein, which affects treatment options.</li>
+                <li><span className="font-semibold">Triple-negative (TNBC)</span>: lacks estrogen, progesterone, and HER2 receptors; can be more aggressive.</li>
+                <li><span className="font-semibold">Inflammatory</span>: rare and aggressive, often causing redness and swelling of the breast.</li>
+                <li><span className="font-semibold">Metastatic</span>: breast cancer that has spread beyond the breast (Stage 4).</li>
+              </ul>
+            </CardContent>
+          </Card>
+        </div>
+
+        <p className="mt-8 text-sm text-gray-500">
+          Sources:
+          <a className="underline hover:text-gray-700" href="https://www.nationalbreastcancer.org/breast-cancer-facts/" target="_blank" rel="noopener noreferrer"> National Breast Cancer Foundation</a>,
+          <a className="underline hover:text-gray-700" href="https://seer.cancer.gov/statfacts/html/breast.html" target="_blank" rel="noopener noreferrer"> NCI SEER</a>,
+          <a className="underline hover:text-gray-700" href="https://www.cancer.org/cancer/types/breast-cancer/about/types-of-breast-cancer.html" target="_blank" rel="noopener noreferrer"> American Cancer Society</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
       {/* Mission Section */}
       
       {/* Vision Section */}
-      <div className="bg-white py-20">
+      <section id="vision" className="bg-white py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6 text-gray-900">Our Vision</h2>
@@ -89,11 +256,9 @@ export default function Home() {
             </ul>
           </div>
         </div>
-      </div>
-      <section id="values">
       </section>
       {/* Values Section */}
-      <div className="container mx-auto px-4 py-20">
+      <section id="values" className="container mx-auto px-4 py-20">
         <h2 className="text-3xl font-bold mb-12 text-center text-gray-900">Our Values</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <Card className="bg-white shadow-xl">
@@ -126,7 +291,7 @@ export default function Home() {
             </CardContent>
           </Card>
         </div>
-      </div>
+      </section>
       <section id="support">
         <div>
           {/* Other sections/components */}
@@ -209,7 +374,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <div className="bg-[#e84393] py-20">
+      <section id="resources" className="bg-[#e84393] py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6 text-white">Breast Cancer Resources</h2>
@@ -218,16 +383,14 @@ export default function Home() {
             </p>
           </div>
         </div>
-      </div>
-      <section id="other-support-groups">
       </section>
-      <div className="bg-[#01A9FF] py-20">
+      <section id="other-support-groups" className="bg-[#01A9FF] py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6 text-white">Other Support Group</h2>
           </div>
         </div>
-      </div>
+      </section>
       <div className="bg-white py-16">
         <div className="container mx-auto px-4">
           <div className="flex space-x-6 overflow-x-auto pb-4 -mx-4 px-4 sm:px-0 md:justify-center md:overflow-visible md:-mx-0 md:px-0">
@@ -250,13 +413,11 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <section id="nutrition">
-      </section>
-      <div className="bg-[#01A9FF] py-20">
+      <section id="nutrition" className="bg-[#01A9FF] py-20">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6 text-white">Nutrition</h2>
         </div>
-      </div>
+      </section>
 
       <div className="bg-white py-16">
         <div className="container mx-auto px-4">
@@ -273,14 +434,11 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <section id="medical-help">
-      </section>
-      <div className="bg-[#01A9FF] py-20">
-
+      <section id="medical-help" className="bg-[#01A9FF] py-20">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6 text-white">Medical Help</h2>
         </div>
-      </div>
+      </section>
       <div className="bg-white py-16">
         <div className="container mx-auto px-4">
 
@@ -300,14 +458,11 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <section id="educational-links">
-      </section>
-      <div className="bg-[#01A9FF] py-20">
-
+      <section id="educational-links" className="bg-[#01A9FF] py-20">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6 text-white">Educational Links</h2>
         </div>
-      </div>
+      </section>
       <div className="bg-white py-16">
         <div className="container mx-auto px-4">
 
@@ -327,16 +482,14 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <section id="prayer-groups">
-      </section>
-      <div className="bg-[#01A9FF] py-20">
+      <section id="prayer-groups" className="bg-[#01A9FF] py-20">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6 text-white">Prayer Groups </h2>
           <p className="text-xl text-white leading-relaxed text-center">
             For those seeking spiritual support, connecting with a prayer group can provide comfort and hope during challenging times. We can offer a call, a text, and email or a prayer. Additional resources are:
           </p>
         </div>
-      </div>
+      </section>
       <div className="bg-white py-16">
         <div className="container mx-auto px-4">
 
@@ -352,17 +505,14 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <section id="financial-assistance">
-      </section>
-      <div className="bg-[#01A9FF] py-20">
-
+      <section id="financial-assistance" className="bg-[#01A9FF] py-20">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6 text-white">Financial Assistance</h2>
           <p className="text-xl text-white leading-relaxed text-center">
             Cancer treatment can be costly. Some of these organizations may provide financial aid to patients and their families:
           </p>
         </div>
-      </div>
+      </section>
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center">
 
@@ -388,17 +538,14 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <section id="prescription-assistance">
-      </section>
-      <div className="bg-[#01A9FF] py-20">
-
+      <section id="prescription-assistance" className="bg-[#01A9FF] py-20">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6 text-white">Prescription Assistance</h2>
           <p className="text-xl text-white leading-relaxed text-center">
             For help covering medication costs, consider these resources:
           </p>
         </div>
-      </div>
+      </section>
 
       <div className="bg-white py-16">
         <div className="container mx-auto px-4">
@@ -420,12 +567,8 @@ export default function Home() {
         </div>
       </div>
       <section id="testimonials">
-      </section>
-      <div>
-        {/* Other sections/components */}
         <TestimonialsSection />
-        {/* Other sections/components */}
-      </div>
+      </section>
       {/* Support Section */}
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
