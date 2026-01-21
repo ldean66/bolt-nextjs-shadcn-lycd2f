@@ -85,11 +85,58 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <section aria-label="Monthly giving promo" className="bg-white">
+        <div className="container mx-auto px-4 py-8 sm:py-10 flex justify-center">
+          <a href="#donate" className="block w-full max-w-xl sm:max-w-2xl">
+            <Image
+              src="/img/monthly-giving.PNG"
+              alt="Support Breast Cancer Fighters for $5/month. Join Us Today."
+              width={1600}
+              height={1600}
+              className="w-full h-auto rounded-2xl shadow-lg ring-1 ring-black/5"
+            />
+          </a>
+        </div>
+      </section>
       <section id="education" className="bg-white py-20">
   <div className="container mx-auto px-4">
     <div className="max-w-5xl mx-auto">
       <h2 className="text-3xl font-bold text-gray-900 text-center">Education & Facts</h2>
-      <p className="mt-4 text-lg text-gray-600 text-center">
+
+      <div className="mt-6 rounded-2xl border border-pink-100 bg-pink-50/60 p-4 text-sm text-gray-700 shadow-sm">
+        <p>
+          <span className="font-semibold">Sources:</span> The facts and statistics below are based on information from the{' '}
+          <a
+            className="underline decoration-pink-400/60 underline-offset-2 hover:text-gray-900"
+            href="https://www.cancer.org/cancer/types/breast-cancer/about/types-of-breast-cancer.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            American Cancer Society
+          </a>
+          ,{' '}
+          <a
+            className="underline decoration-pink-400/60 underline-offset-2 hover:text-gray-900"
+            href="https://seer.cancer.gov/statfacts/html/breast.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            NCI SEER
+          </a>
+          , and the{' '}
+          <a
+            className="underline decoration-pink-400/60 underline-offset-2 hover:text-gray-900"
+            href="https://www.nationalbreastcancer.org/breast-cancer-facts/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            National Breast Cancer Foundation
+          </a>
+          .
+        </p>
+      </div>
+
+      <p className="mt-6 text-lg text-gray-600 text-center">
         Breast cancer awareness starts with reliable information. Here are key U.S. statistics and a quick overview of
         common breast cancer types.
       </p>

@@ -65,6 +65,21 @@ export default function NavBar() {
     };
   }, []);
 
+  useEffect(() => {
+    const openFromHash = () => {
+      if (window.location.hash === '#donate') {
+        setIsDonateModalOpen(true);
+      }
+    };
+
+    openFromHash();
+    window.addEventListener('hashchange', openFromHash);
+
+    return () => {
+      window.removeEventListener('hashchange', openFromHash);
+    };
+  }, []);
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -88,6 +103,9 @@ export default function NavBar() {
 
   const handleCloseDonateModal = () => {
     setIsDonateModalOpen(false);
+    if (window.location.hash === '#donate') {
+      window.history.replaceState(null, '', window.location.pathname + window.location.search);
+    }
   };
 
   return (
