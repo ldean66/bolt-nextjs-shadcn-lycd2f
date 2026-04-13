@@ -14,6 +14,8 @@ const navItems = [
   { id: 'vision', label: 'Our Vision' },
   { id: 'values', label: 'Our Values' },
   { id: "gallery", label: "Gallery" },
+  { id: "community-stories", label: "Community Stories" },
+  { id: "board-members", label: "Board Members" },
   { id: 'resources', label: 'Resources', sublinks: [
     { id: 'other-support-groups', label: 'Other Support Groups' },
     { id: 'nutrition', label: 'Nutrition' },
@@ -173,8 +175,8 @@ export default function NavBar() {
                 <button
                   onClick={() => scrollToSection(item.id)}
                   className={cn(
-                    "text-sm font-medium transition-colors hover:text-blue-600 py-2",
-                    activeSection === item.id ? "text-blue-600" : "text-gray-600"
+                    "text-sm font-medium transition-colors hover:text-[#d95a96] py-2",
+                    activeSection === item.id ? "text-[#d95a96]" : "text-gray-600"
                   )}
                 >
                   {item.label}
@@ -190,8 +192,8 @@ export default function NavBar() {
                         key={sub.id}
                         onClick={() => scrollToSection(sub.id)}
                         className={cn(
-                          "block w-full px-4 py-2 text-sm font-medium text-left transition-colors hover:text-blue-600 hover:bg-gray-100",
-                          activeSection === sub.id ? "text-blue-600 bg-gray-50" : "text-gray-600"
+                          "block w-full px-4 py-2 text-sm font-medium text-left transition-colors hover:text-[#d95a96] hover:bg-gray-100",
+                          activeSection === sub.id ? "text-[#d95a96] bg-gray-50" : "text-gray-600"
                         )}
                       >
                         {sub.label}
@@ -227,8 +229,8 @@ export default function NavBar() {
                       }
                     }}
                     className={cn(
-                      "w-full text-sm font-medium transition-colors hover:text-blue-600 text-left px-4 py-2 rounded-md hover:bg-gray-100",
-                      activeSection === item.id ? "text-blue-600 bg-gray-50" : "text-gray-600"
+                      "w-full text-sm font-medium transition-colors hover:text-[#d95a96] text-left px-4 py-2 rounded-md hover:bg-gray-100",
+                      activeSection === item.id ? "text-[#d95a96] bg-gray-50" : "text-gray-600"
                     )}
                   >
                     {item.label}
@@ -240,8 +242,8 @@ export default function NavBar() {
                           key={sub.id}
                           onClick={() => scrollToSection(sub.id)}
                           className={cn(
-                            "block w-full px-4 py-2 text-sm font-medium text-left transition-colors hover:text-blue-600 hover:bg-gray-100 rounded-md",
-                            activeSection === sub.id ? "text-blue-600 bg-gray-50" : "text-gray-600"
+                            "block w-full px-4 py-2 text-sm font-medium text-left transition-colors hover:text-[#d95a96] hover:bg-gray-100 rounded-md",
+                            activeSection === sub.id ? "text-[#d95a96] bg-gray-50" : "text-gray-600"
                           )}
                         >
                           {sub.label}

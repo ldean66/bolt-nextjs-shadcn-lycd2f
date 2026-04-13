@@ -3,6 +3,8 @@ import NavBar from '@/components/ui/NavBar';
 import Footer from '@/components/ui/Footer';
 import { Card, CardContent } from "@/components/ui/card";
 import TestimonialsSection from '@/components/ui/TestimonialsSection';
+import CommunityStoriesSection from '@/components/ui/CommunityStoriesSection';
+import BoardMembersSection from '@/components/ui/BoardMembersSection';
 import SupportSection from '@/components/ui/SupportSection';
 import { BookOpen, HeartPulse, Lightbulb, HandHeart, Rocket, Puzzle } from "lucide-react";
 import Image from 'next/image';
@@ -60,7 +62,7 @@ export default function Home() {
               </div>
               <div className="w-full md:w-1/2 text-white text-center md:text-left mt-0 md:mt-24">
                 <h1 className="text-4xl md:text-5xl font-bold mb-4">More Than Conquerors</h1>
-                <p className="text-lg md:text-xl mb-8">More than Conquerors exist to educate and support, patients survivors, caregivers, and their families affected by breast cancer.</p>
+                <p className="text-lg md:text-xl mb-8">More than Conquerors exists to educate and support, patients survivors, caregivers, and their families affected by breast cancer.</p>
               </div>
             </div>
           </div>
@@ -421,6 +423,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <CommunityStoriesSection />
+      <BoardMembersSection />
       <section id="resources" className="bg-[#e84393] py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
@@ -684,7 +688,7 @@ export default function Home() {
               <li>Makeup sessions</li>
               <li>Style sessions</li>
               <li>Clerical assistance</li>
-              <li>"Thinking of you" cards</li>
+              <li>&quot;Thinking of you&quot; cards</li>
             </ol>
 
           </div>
