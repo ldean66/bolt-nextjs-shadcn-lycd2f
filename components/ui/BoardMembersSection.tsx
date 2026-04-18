@@ -27,11 +27,11 @@ const boardMembers: BoardMember[] = [
     alt: 'Portrait of Chevelle Jackson',
   },
   {
-    name: 'Deidre Adams',
+    name: 'Deirdre Adams',
     bio:
-      'Deidre is a native of Harrisburg, PA and lived in the DMV area for the majority of her adult life. With a career in finance for over 30 years, she knows how to support organizations in their financial efforts to help support others. In her spare time she loves to read and volunteer at the hospital supporting sick children and their families.',
-    image: '/img/board/Deidre Adams.png',
-    alt: 'Portrait of Deidre Adams',
+      'Deirdre is a native of Harrisburg, PA and lived in the DMV area for the majority of her adult life. With a career in finance for over 30 years, she knows how to support organizations in their financial efforts to help support others. In her spare time she loves to read and volunteer at the hospital supporting sick children and their families.',
+    image: '/img/board/Deirdre Adams.png',
+    alt: 'Portrait of Deirdre Adams',
   },
   {
     name: 'Janet Mosby',

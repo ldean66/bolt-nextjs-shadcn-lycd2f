@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react';
 import Image from 'next/image';
-import { ArrowUpRight, HeartHandshake, ExternalLink, Newspaper } from 'lucide-react';
+import { ArrowUpRight, HeartHandshake, Newspaper } from 'lucide-react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { Card, CardContent } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
@@ -19,14 +19,77 @@ type CommunityStory = {
   badge: string;
 };
 
-const featuredNews = {
-  title: 'Featured in the News',
-  source: 'Montgomery County Volunteer News',
-  description:
-    'More Than Conquerors was mentioned in the February/March 2026 newsletter, recognizing the organization\'s community impact and volunteer spirit for MLK Day.',
-  href: 'https://myemail.constantcontact.com/Montgomery-County-Volunteer-News---February-March-2026.html?soid=1102184431012&aid=39eYz2nqExY',
-  badge: 'Press Mention',
+type NewsHighlight = {
+  id: string;
+  title: string;
+  source: string;
+  description: string;
+  badge: string;
+  publishedAt: string;
+  publishedLabel: string;
+  links: Array<{
+    label: string;
+    href: string;
+  }>;
+  logos?: Array<{
+    src: string;
+    alt: string;
+    href: string;
+  }>;
 };
+
+const newsHighlights: NewsHighlight[] = [
+  {
+    id: 'press-mention',
+    title: 'Featured in the News',
+    source: 'Montgomery County Volunteer News',
+    description:
+      'More Than Conquerors was mentioned in the February/March 2026 newsletter, recognizing the organization\'s community impact and volunteer spirit for MLK Day.',
+    publishedAt: '2026-03-01',
+    publishedLabel: 'Uploaded March 1, 2026',
+    links: [
+      {
+        label: 'Read the Newsletter',
+        href: 'https://myemail.constantcontact.com/Montgomery-County-Volunteer-News---February-March-2026.html?soid=1102184431012&aid=39eYz2nqExY',
+      },
+    ],
+    badge: 'Press Mention',
+  },
+  {
+    id: 'volunteer-communities',
+    title: 'Lydia joins two volunteer communities',
+    source: 'Community Partnership Update',
+    description:
+      'Lydia has joined the Sidney Kimmel Comprehensive Cancer Center and National Breast Cancer Foundation volunteer communities, extending the organization\'s connection to mission-aligned support networks and survivor advocacy spaces.',
+    publishedAt: '2026-04-17',
+    publishedLabel: 'Uploaded April 17, 2026',
+    links: [
+      {
+        label: 'Sidney Kimmel Community',
+        href: 'https://www.hopkinsmedicine.org/kimmel-cancer-center',
+      },
+      {
+        label: 'National Breast Cancer Foundation',
+        href: 'https://www.nationalbreastcancer.org/',
+      },
+    ],
+    logos: [
+      {
+        src: '/img/johnHopkins.png',
+        alt: 'Johns Hopkins Medicine Sidney Kimmel Comprehensive Cancer Center logo',
+        href: 'https://www.hopkinsmedicine.org/kimmel-cancer-center',
+      },
+      {
+        src: '/img/nbcfInc.png',
+        alt: 'National Breast Cancer Foundation logo',
+        href: 'https://www.nationalbreastcancer.org/',
+      },
+    ],
+    badge: 'Volunteer Community',
+  },
+];
+
+const sortedNewsHighlights = [...newsHighlights].sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
 
 const communityStories: CommunityStory[] = [
   {
@@ -149,35 +212,66 @@ export default function CommunityStoriesSection() {
             </p>
           </div>
 
-          <Card className="mb-10 overflow-hidden rounded-3xl border border-pink-100 bg-white/95 shadow-xl">
-            <CardContent className="p-6 sm:p-8">
-              <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-pink-50 px-4 py-2 text-sm font-semibold text-pink-700">
-                <Newspaper className="h-4 w-4" />
-                {featuredNews.badge}
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 sm:text-3xl">{featuredNews.title}</h3>
-              <p className="mt-3 text-base leading-7 text-gray-600">
-                {featuredNews.description}
-              </p>
-              <p className="mt-4 text-sm font-semibold uppercase tracking-wide text-gray-500">
-                {featuredNews.source}
-              </p>
-              <div className="mt-6">
-                <a
-                  href={featuredNews.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={cn(
-                    'inline-flex items-center gap-2 rounded-full border border-pink-700 bg-pink-600 px-4 py-2.5 text-sm font-semibold text-white shadow-md transition-colors',
-                    'hover:bg-pink-700 hover:shadow-lg'
-                  )}
-                >
-                  Read the Newsletter
-                  <ArrowUpRight className="h-4 w-4" />
-                </a>
-              </div>
-            </CardContent>
-          </Card>
+          <div className="mb-10 grid gap-6 lg:grid-cols-2">
+            {sortedNewsHighlights.map((highlight) => (
+              <Card key={highlight.id} className="overflow-hidden rounded-3xl border border-pink-100 bg-white/95 shadow-xl">
+                <CardContent className="flex h-full flex-col p-6 sm:p-8">
+                  <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
+                    <div className="inline-flex items-center gap-2 rounded-full bg-pink-50 px-4 py-2 text-sm font-semibold text-pink-700">
+                      <Newspaper className="h-4 w-4" />
+                      {highlight.badge}
+                    </div>
+                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gray-500">
+                      {highlight.publishedLabel}
+                    </p>
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 sm:text-3xl">{highlight.title}</h3>
+                  <p className="mt-3 text-base leading-7 text-gray-600">{highlight.description}</p>
+                  <p className="mt-4 text-sm font-semibold uppercase tracking-wide text-gray-500">{highlight.source}</p>
+
+                  {highlight.logos ? (
+                    <div className="mt-6 grid gap-4 sm:grid-cols-2">
+                      {highlight.logos.map((logo) => (
+                        <a
+                          key={logo.alt}
+                          href={logo.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center justify-center rounded-2xl border border-pink-100 bg-pink-50/60 p-4 transition-colors hover:bg-pink-50"
+                        >
+                          <Image
+                            src={logo.src}
+                            alt={logo.alt}
+                            width={300}
+                            height={200}
+                            className="h-auto max-h-28 w-auto object-contain"
+                          />
+                        </a>
+                      ))}
+                    </div>
+                  ) : null}
+
+                  <div className="mt-6 flex flex-wrap gap-3">
+                    {highlight.links.map((link) => (
+                      <a
+                        key={link.href}
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={cn(
+                          'inline-flex items-center gap-2 rounded-full border border-pink-700 bg-pink-600 px-4 py-2.5 text-sm font-semibold text-white shadow-md transition-colors',
+                          'hover:bg-pink-700 hover:shadow-lg'
+                        )}
+                      >
+                        {link.label}
+                        <ArrowUpRight className="h-4 w-4" />
+                      </a>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
 
           <Carousel
             opts={{ align: 'start', loop: false }}

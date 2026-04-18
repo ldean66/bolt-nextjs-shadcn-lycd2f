@@ -62,7 +62,7 @@ export default function Home() {
               </div>
               <div className="w-full md:w-1/2 text-white text-center md:text-left mt-0 md:mt-24">
                 <h1 className="text-4xl md:text-5xl font-bold mb-4">More Than Conquerors</h1>
-                <p className="text-lg md:text-xl mb-8">More than Conquerors exists to educate and support, patients survivors, caregivers, and their families affected by breast cancer.</p>
+                <p className="text-lg md:text-xl mb-8">More than Conquerors exists to educate and support: patients, survivors, caregivers, and their families affected by breast cancer.</p>
               </div>
             </div>
           </div>
@@ -83,6 +83,59 @@ export default function Home() {
               <p className="text-lg text-white leading-relaxed">
                 Breast cancer is a disease where cells within the breast tissues grow out of control and form tumors, potentially spreading to other parts of the body. These abnormal cells can originate in the milk ducts or lobules of the breast.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section aria-label="May 9 mental health summit" className="bg-white py-16 sm:py-20">
+        <div className="container mx-auto px-4">
+          <div className="mx-auto max-w-6xl">
+            <div className="mb-5 flex justify-start">
+              <div className="inline-flex items-center gap-3 rounded-full border border-pink-200 bg-white/90 px-5 py-2.5 text-sm font-semibold uppercase tracking-[0.24em] text-pink-700 shadow-lg shadow-pink-100/80 ring-1 ring-pink-100 animate-[pulse_3.6s_ease-in-out_infinite]">
+                <span className="h-2.5 w-2.5 rounded-full bg-pink-500 shadow-[0_0_18px_rgba(236,72,153,0.9)] animate-ping" />
+                Upcoming Event
+              </div>
+            </div>
+            <div className="grid gap-8 overflow-hidden rounded-[2rem] border border-pink-100 bg-gradient-to-br from-white via-pink-50/70 to-rose-100/60 p-6 shadow-xl lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:p-8">
+              <div className="order-2 lg:order-1">
+                <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
+                  Mental Health Summit for breast cancer survivors and caregivers
+                </h2>
+                <p className="mt-4 text-base leading-7 text-gray-600 sm:text-lg">
+                  Lydia and More Than Conquerors are hosting a community summit on May 9, 2026 from 12:00 PM to 3:00 PM
+                  at Bowie Library, 15301 Hall Road, Bowie, MD 20721. All are welcome for a day centered on mental
+                  health, supportive resources, and connection.
+                </p>
+                <div className="mt-6 space-y-2 text-sm font-medium uppercase tracking-[0.18em] text-pink-700 sm:text-base">
+                  <p>May 9, 2026</p>
+                  <p>12:00 PM to 3:00 PM</p>
+                  <p>Bowie Library, Bowie, Maryland</p>
+                </div>
+                <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                  <Button asChild className="bg-pink-600 text-white hover:bg-pink-700">
+                    <a href="mailto:lydia@morethan-conquerors.com?subject=Mental%20Health%20Summit%20RSVP">
+                      RSVP by Email
+                    </a>
+                  </Button>
+                  <Button asChild variant="outline" className="border-pink-300 text-pink-700 hover:bg-pink-50">
+                    <a href="/img/mental-health-summit-may-9-2026.jpg" target="_blank" rel="noopener noreferrer">
+                      Open Flyer
+                    </a>
+                  </Button>
+                </div>
+              </div>
+
+              <div className="order-1 lg:order-2">
+                <div className="overflow-hidden rounded-[1.75rem] border border-white/80 bg-white p-3 shadow-2xl ring-1 ring-pink-100/80">
+                  <Image
+                    src="/img/mental-health-summit-may-9-2026.jpg"
+                    alt="More Than Conquerors mental health summit flyer for May 9, 2026 at Bowie Library"
+                    width={1024}
+                    height={1365}
+                    className="h-auto w-full rounded-[1.25rem] object-cover"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
