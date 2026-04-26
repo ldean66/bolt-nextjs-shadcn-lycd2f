@@ -4,6 +4,7 @@ import { Facebook, Instagram, Menu, Twitter, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
+import { isMonthlyGivingEnabled } from '@/lib/paypal-config';
 import Modal from './Modal';
 import PayPalButton from './PayPalButton';
 
@@ -30,6 +31,7 @@ const navItems = [
 ];
 
 export default function NavBar() {
+  const monthlyGivingEnabled = isMonthlyGivingEnabled();
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -262,7 +264,7 @@ export default function NavBar() {
           <div className="App">
             <Card className="p-8 bg-white dark:bg-gray-800 shadow-xl rounded-2xl">
               <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Make a Donation</h2>
-              <PayPalButton />
+              <PayPalButton onSuccess={handleCloseDonateModal} />
               <div className="mt-6 rounded-xl border border-pink-200 bg-pink-50 p-4">
                 <h3 className="text-lg font-semibold text-pink-700 text-center">Zelle Alternative</h3>
                 <p className="text-sm text-gray-600 text-center mt-1">Scan to donate via Zelle</p>
@@ -273,8 +275,9 @@ export default function NavBar() {
                 />
               </div>
               <p className="mt-6 text-sm text-gray-500 dark:text-gray-400 text-center">
-                All donations are secure and encrypted. You can choose to make this a monthly donation
-                during the PayPal checkout process.
+                {monthlyGivingEnabled
+                  ? 'All donations are secure and encrypted. Choose a one-time gift or start monthly giving directly in the PayPal flow.'
+                  : 'All donations are secure and encrypted. Complete a secure one-time donation directly in the PayPal flow.'}
               </p>
             </Card>
           </div>

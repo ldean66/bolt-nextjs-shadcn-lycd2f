@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Modal from './Modal';
 import { Card } from '@/components/ui/card';
+import { isMonthlyGivingEnabled } from '@/lib/paypal-config';
 import PayPalButton from './PayPalButton';
 
 const cards = [
@@ -27,6 +28,7 @@ const cards = [
 ];
 
 const SupportSection = () => {
+  const monthlyGivingEnabled = isMonthlyGivingEnabled();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isVolunteerModalOpen, setIsVolunteerModalOpen] = useState(false);
   const [isNominateModalOpen, setIsNominateModalOpen] = useState(false);
@@ -117,7 +119,7 @@ const SupportSection = () => {
           <div className="App">
             <Card className="p-8 bg-white dark:bg-gray-800 shadow-xl rounded-2xl">
               <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Make a Donation</h2>
-              <PayPalButton />
+              <PayPalButton onSuccess={handleCloseModal} />
               <div className="mt-6 rounded-xl border border-pink-200 bg-pink-50 p-4">
                 <h3 className="text-lg font-semibold text-pink-700 text-center">Zelle Alternative</h3>
                 <p className="text-sm text-gray-600 text-center mt-1">Scan to donate via Zelle</p>
@@ -128,8 +130,9 @@ const SupportSection = () => {
                 />
               </div>
               <p className="mt-6 text-sm text-gray-500 dark:text-gray-400 text-center">
-                All donations are secure and encrypted. You can choose to make this a monthly donation 
-                during the PayPal checkout process.
+                {monthlyGivingEnabled
+                  ? 'All donations are secure and encrypted. Choose a one-time gift or start monthly giving directly in the PayPal flow.'
+                  : 'All donations are secure and encrypted. Complete a secure one-time donation directly in the PayPal flow.'}
               </p>
             </Card>
             <Message content={message} />

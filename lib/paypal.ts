@@ -48,7 +48,13 @@ function formatPayPalError(prefix: string, status: number, raw: string): string 
   return `${prefix} (${status}): ${parts.join(' | ')}`;
 }
 
-function getRequiredEnv(name: 'PAYPAL_CLIENT_ID' | 'PAYPAL_CLIENT_SECRET'): string {
+function getRequiredEnv(
+  name:
+    | 'PAYPAL_CLIENT_ID'
+    | 'PAYPAL_CLIENT_SECRET'
+    | 'PAYPAL_WEBHOOK_ID'
+    | 'PAYPAL_MONTHLY_PLAN_ID'
+): string {
   if (name === 'PAYPAL_CLIENT_ID') {
     const serverClientId = process.env.PAYPAL_CLIENT_ID?.trim();
     const publicClientId = process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID?.trim();
@@ -66,12 +72,43 @@ function getRequiredEnv(name: 'PAYPAL_CLIENT_ID' | 'PAYPAL_CLIENT_SECRET'): stri
     return serverClientId;
   }
 
-  const secret = process.env.PAYPAL_CLIENT_SECRET?.trim();
-  if (!secret) {
-    throw new Error('Missing required environment variable: PAYPAL_CLIENT_SECRET');
+  if (name === 'PAYPAL_MONTHLY_PLAN_ID') {
+    const serverPlanId = process.env.PAYPAL_MONTHLY_PLAN_ID?.trim();
+    const publicPlanId = process.env.NEXT_PUBLIC_PAYPAL_MONTHLY_PLAN_ID?.trim();
+    const planId = serverPlanId || publicPlanId;
+
+    if (!planId) {
+      throw new Error('Missing required environment variable: PAYPAL_MONTHLY_PLAN_ID');
+    }
+
+    if (serverPlanId && publicPlanId && serverPlanId !== publicPlanId) {
+      throw new Error(
+        'PAYPAL_MONTHLY_PLAN_ID and NEXT_PUBLIC_PAYPAL_MONTHLY_PLAN_ID do not match.'
+      );
+    }
+
+    return planId;
   }
 
-  return secret;
+  if (name === 'PAYPAL_WEBHOOK_ID') {
+    const webhookId = process.env.PAYPAL_WEBHOOK_ID?.trim();
+    if (!webhookId) {
+      throw new Error('Missing required environment variable: PAYPAL_WEBHOOK_ID');
+    }
+
+    return webhookId;
+  }
+
+  const secret = process.env.PAYPAL_CLIENT_SECRET?.trim();
+  if (name === 'PAYPAL_CLIENT_SECRET') {
+    if (!secret) {
+      throw new Error('Missing required environment variable: PAYPAL_CLIENT_SECRET');
+    }
+
+    return secret;
+  }
+
+  throw new Error(`Unhandled PayPal environment variable lookup: ${name}`);
 }
 
 export async function getPayPalAccessToken(): Promise<string> {
@@ -112,7 +149,11 @@ export async function paypalRequest<TResponse>(
   path: string,
   method: 'POST' | 'GET',
   accessToken: string,
-  body?: unknown
+  body?: unknown,
+  options?: {
+    requestId?: string;
+    headers?: Record<string, string>;
+  }
 ): Promise<TResponse> {
   const response = await fetch(`${PAYPAL_API_BASE}${path}`, {
     method,
@@ -120,6 +161,8 @@ export async function paypalRequest<TResponse>(
       Authorization: `Bearer ${accessToken}`,
       'Content-Type': 'application/json',
       Accept: 'application/json',
+      ...(options?.requestId ? { 'PayPal-Request-Id': options.requestId } : {}),
+      ...options?.headers,
     },
     body: body ? JSON.stringify(body) : undefined,
     cache: 'no-store',
@@ -141,4 +184,26 @@ export function normalizeAmount(rawAmount: string): string {
 
   const rounded = Math.round(numeric * 100) / 100;
   return rounded.toFixed(2);
+}
+
+export function createPayPalRequestId(prefix: string): string {
+  return `${prefix}-${crypto.randomUUID()}`;
+}
+
+export function getPayPalEnvironmentName(): 'live' | 'sandbox' {
+  return isLiveEnvironment ? 'live' : 'sandbox';
+}
+
+export function getPayPalWebhookId(): string {
+  return getRequiredEnv('PAYPAL_WEBHOOK_ID');
+}
+
+export function getPayPalMonthlyPlanId(): string {
+  return getRequiredEnv('PAYPAL_MONTHLY_PLAN_ID');
+}
+
+export function hasPayPalMonthlyPlanId(): boolean {
+  return Boolean(
+    process.env.PAYPAL_MONTHLY_PLAN_ID?.trim() || process.env.NEXT_PUBLIC_PAYPAL_MONTHLY_PLAN_ID?.trim()
+  );
 }
