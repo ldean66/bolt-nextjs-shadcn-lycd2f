@@ -6,6 +6,7 @@ export type PaymentMode = 'one_time' | 'monthly';
 export type PaymentStatus =
   | 'draft'
   | 'order_created'
+  | 'checkout_cancelled'
   | 'capture_completed'
   | 'capture_denied'
   | 'capture_reversed'

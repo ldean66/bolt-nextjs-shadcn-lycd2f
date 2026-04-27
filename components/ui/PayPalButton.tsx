@@ -61,6 +61,37 @@ export default function PayPalButton({ onSuccess }: PayPalButtonProps) {
     currentDonationIdRef.current = null;
   };
 
+  const getStringValue = (value: unknown): string | undefined =>
+    typeof value === 'string' ? value : undefined;
+
+  const markCheckoutCancelled = async (input: {
+    reason: 'paypal_cancelled' | 'user_dismissed';
+    orderID?: string;
+    subscriptionID?: string;
+  }) => {
+    if (!currentDonationIdRef.current) {
+      return;
+    }
+
+    try {
+      await fetch('/api/paypal/cancel-checkout', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          donationId: currentDonationIdRef.current,
+          orderID: input.orderID,
+          subscriptionID: input.subscriptionID,
+          mode: donationMode,
+          reason: input.reason,
+        }),
+      });
+    } catch (error) {
+      console.error('Failed to record PayPal checkout cancellation:', error);
+    }
+  };
+
   return (
     <div className="w-full max-w-md mx-auto">
       {!showPayPal ? (
@@ -218,6 +249,18 @@ export default function PayPalButton({ onSuccess }: PayPalButtonProps) {
                     onSuccess?.();
                   }
                 }}
+                onCancel={async (data) => {
+                  await markCheckoutCancelled({
+                    reason: 'paypal_cancelled',
+                    orderID: getStringValue(data.orderID),
+                  });
+                  setShowPayPal(false);
+                  resetCheckoutState();
+                  toast({
+                    title: 'Donation cancelled',
+                    description: 'Your PayPal checkout was cancelled before payment completed.',
+                  });
+                }}
                 onError={(error) => {
                   console.error('PayPal checkout error:', error);
                   setErrorMessage(
@@ -317,6 +360,18 @@ export default function PayPalButton({ onSuccess }: PayPalButtonProps) {
                     onSuccess?.();
                   }
                 }}
+                onCancel={async (data) => {
+                  await markCheckoutCancelled({
+                    reason: 'paypal_cancelled',
+                    subscriptionID: getStringValue(data.subscriptionID),
+                  });
+                  setShowPayPal(false);
+                  resetCheckoutState();
+                  toast({
+                    title: 'Monthly giving cancelled',
+                    description: 'Your PayPal subscription checkout was cancelled before completion.',
+                  });
+                }}
                 onError={(error) => {
                   console.error('PayPal subscription error:', error);
                   setErrorMessage(
@@ -331,7 +386,8 @@ export default function PayPalButton({ onSuccess }: PayPalButtonProps) {
           </PayPalScriptProvider>
           <Button
             variant="outline"
-            onClick={() => {
+            onClick={async () => {
+              await markCheckoutCancelled({ reason: 'user_dismissed' });
               setShowPayPal(false);
               resetCheckoutState();
             }}
