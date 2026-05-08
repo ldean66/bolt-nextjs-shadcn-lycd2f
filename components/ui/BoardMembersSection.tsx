@@ -62,11 +62,11 @@ const boardMembers: BoardMember[] = [
     alt: 'Portrait of Kathy DeJesus',
   },
   {
-    name: 'Doreen Doyle',
+    name: 'Doreen Doye',
     bio:
       'Doreen is a retired MCPS financial specialist. In her spare time, she enjoys cooking and crafting and always looking for opportunities to volunteer and help others. She is a breast cancer conqueror.',
     image: '/img/board/Doreen Doye.png',
-    alt: 'Portrait of Doreen Doyle',
+    alt: 'Portrait of Doreen Doye',
   },
 ];
 
