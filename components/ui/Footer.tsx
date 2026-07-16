@@ -111,7 +111,7 @@ export default function Footer() {
               <a href="#" className="hover:text-[#e84393] transition-colors">Accessibility</a>
             </div>
             <div className="flex items-center gap-2">
-              <span>EIN: 12-3456789</span>
+              <span>EIN: 32-0749608</span>
               <span>|</span>
               <span>501(c)(3) Organization</span>
             </div>
