@@ -113,8 +113,8 @@ export default function Home() {
                 </div>
                 <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                   <Button asChild className="bg-pink-600 text-white hover:bg-pink-700">
-                    <a href="mailto:Lydia@morethan-conquerors.com?subject=Strut%20for%20Support%20Tickets">
-                      Contact for Tickets
+                    <a href="https://bit.ly/4vA0vTp" target="_blank" rel="noopener noreferrer">
+                      Buy Tickets
                     </a>
                   </Button>
                   <Button asChild variant="outline" className="border-pink-300 text-pink-700 hover:bg-pink-50">
