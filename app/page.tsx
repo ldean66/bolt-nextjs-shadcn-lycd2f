@@ -87,7 +87,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section aria-label="May 9 mental health summit" className="bg-white py-16 sm:py-20">
+      <section aria-label="October 17 Strut for Support event" className="bg-white py-16 sm:py-20">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-6xl">
             <div className="mb-5 flex justify-start">
@@ -99,26 +99,26 @@ export default function Home() {
             <div className="grid gap-8 overflow-hidden rounded-[2rem] border border-pink-100 bg-gradient-to-br from-white via-pink-50/70 to-rose-100/60 p-6 shadow-xl lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:p-8">
               <div className="order-2 lg:order-1">
                 <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
-                  Mental Health Summit for breast cancer survivors and caregivers
+                  Annual Strut for Support Brunch & Fashion Show
                 </h2>
                 <p className="mt-4 text-base leading-7 text-gray-600 sm:text-lg">
-                  Lydia and More Than Conquerors are hosting a community summit on May 9, 2026 from 12:00 PM to 3:00 PM
-                  at Bowie Library, 15301 Hall Road, Bowie, MD 20721. All are welcome for a day centered on mental
-                  health, supportive resources, and connection.
+                  More Than Conquerors is hosting Strut for Support on October 17, 2026 from 12:00 PM to 4:00 PM
+                  at the Civic Building, 1 Veterans Plaza, Silver Spring, MD. Join us for brunch, a fashion show,
+                  awards, speakers, vendors, and breast cancer support.
                 </p>
                 <div className="mt-6 space-y-2 text-sm font-medium uppercase tracking-[0.18em] text-pink-700 sm:text-base">
-                  <p>May 9, 2026</p>
-                  <p>12:00 PM to 3:00 PM</p>
-                  <p>Bowie Library, Bowie, Maryland</p>
+                  <p>October 17, 2026</p>
+                  <p>12:00 PM to 4:00 PM</p>
+                  <p>Civic Building, Silver Spring, Maryland</p>
                 </div>
                 <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                   <Button asChild className="bg-pink-600 text-white hover:bg-pink-700">
-                    <a href="mailto:lydia@morethan-conquerors.com?subject=Mental%20Health%20Summit%20RSVP">
-                      RSVP by Email
+                    <a href="mailto:Lydia@morethan-conquerors.com?subject=Strut%20for%20Support%20Tickets">
+                      Contact for Tickets
                     </a>
                   </Button>
                   <Button asChild variant="outline" className="border-pink-300 text-pink-700 hover:bg-pink-50">
-                    <a href="/img/mental-health-summit-may-9-2026.jpg" target="_blank" rel="noopener noreferrer">
+                    <a href="/img/strut-for-support.PNG" target="_blank" rel="noopener noreferrer">
                       Open Flyer
                     </a>
                   </Button>
@@ -128,10 +128,10 @@ export default function Home() {
               <div className="order-1 lg:order-2">
                 <div className="overflow-hidden rounded-[1.75rem] border border-white/80 bg-white p-3 shadow-2xl ring-1 ring-pink-100/80">
                   <Image
-                    src="/img/mental-health-summit-may-9-2026.jpg"
-                    alt="More Than Conquerors mental health summit flyer for May 9, 2026 at Bowie Library"
+                    src="/img/strut-for-support.PNG"
+                    alt="More Than Conquerors annual Strut for Support brunch and fashion show flyer for October 17, 2026"
                     width={1024}
-                    height={1365}
+                    height={1536}
                     className="h-auto w-full rounded-[1.25rem] object-cover"
                   />
                 </div>
