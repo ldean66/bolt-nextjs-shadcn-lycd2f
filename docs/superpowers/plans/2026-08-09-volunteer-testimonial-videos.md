@@ -2,7 +2,7 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Add two anonymous, locally hosted volunteer testimonial videos to the Community Stories carousel.
+**Goal:** Add two caption-free, locally hosted volunteer testimonial videos to the Community Stories carousel.
 
 **Architecture:** Extend the existing `CommunityStory` union with a local `video` variant and let `StoryMedia` render it with the native HTML video player. Store the supplied assets in `public/vid`; preserve all existing Instagram and image behavior.
 
@@ -22,8 +22,8 @@
 
 **Files:**
 - Create: `scripts/community-stories-videos.test.mjs`
-- Create: `public/vid/volunteer-testimonial-1.mov`
-- Create: `public/vid/volunteer-testimonial-2.mov`
+- Create: `public/vid/volunteer-testimonial-1.mp4`
+- Create: `public/vid/volunteer-testimonial-2.mp4`
 - Modify: `components/ui/CommunityStoriesSection.tsx:10-20,94-117,147-193,293-306`
 
 **Interfaces:**
@@ -41,18 +41,21 @@ import test from 'node:test';
 
 const source = readFileSync('components/ui/CommunityStoriesSection.tsx', 'utf8');
 
-test('renders two anonymous volunteer testimonial videos in the carousel', () => {
+test('renders two caption-free MP4 volunteer testimonials in the carousel', () => {
   assert.match(source, /mediaType: 'instagram-embed' \| 'image' \| 'video'/);
   assert.equal((source.match(/badge: 'Volunteer Testimonial'/g) ?? []).length, 2);
-  assert.match(source, /\/vid\/volunteer-testimonial-1\.mov/);
-  assert.match(source, /\/vid\/volunteer-testimonial-2\.mov/);
+  assert.match(source, /\/vid\/volunteer-testimonial-1\.mp4/);
+  assert.match(source, /\/vid\/volunteer-testimonial-2\.mp4/);
+  assert.doesNotMatch(source, /An anonymous volunteer/);
   assert.match(source, /<video/);
   assert.match(source, /controls/);
   assert.match(source, /preload="metadata"/);
   assert.match(source, /aria-label=\{story\.alt\}/);
-  assert.match(source, /story\.mediaType !== 'video'/);
-  assert.equal(existsSync('public/vid/volunteer-testimonial-1.mov'), true);
-  assert.equal(existsSync('public/vid/volunteer-testimonial-2.mov'), true);
+  assert.match(source, /story\.mediaType !== 'video' \? \(/);
+  assert.equal(existsSync('public/vid/volunteer-testimonial-1.mp4'), true);
+  assert.equal(existsSync('public/vid/volunteer-testimonial-2.mp4'), true);
+  assert.equal(existsSync('public/vid/volunteer-testimonial-1.mov'), false);
+  assert.equal(existsSync('public/vid/volunteer-testimonial-2.mov'), false);
 });
 ```
 
@@ -64,11 +67,11 @@ Expected: FAIL because the component lacks the `video` variant and both public a
 
 - [ ] **Step 3: Copy the supplied assets into the public video directory**
 
-Copy `PXL_20260809_163913667.mov` to `public/vid/volunteer-testimonial-1.mov` and `IMG_1260.mov` to `public/vid/volunteer-testimonial-2.mov`. Compare source and destination SHA-256 checksums to confirm exact copies.
+Convert `PXL_20260809_163913667.mov` to `public/vid/volunteer-testimonial-1.mp4` and `IMG_1260.mov` to `public/vid/volunteer-testimonial-2.mp4` using H.264 video, AAC audio, and fast-start metadata. Verify the output codecs and remove the `.mov` copies.
 
 - [ ] **Step 4: Add the minimal local-video implementation**
 
-Update `CommunityStory` so `mediaType` accepts `'video'` and make `postUrl` optional. Add two stories with unique IDs, `title: 'Volunteer Experience'`, `badge: 'Volunteer Testimonial'`, anonymous descriptions and alt labels, and the two `/vid/` paths.
+Update `CommunityStory` so `mediaType` accepts `'video'` and make `postUrl` and `description` optional. Add two stories with unique IDs, `title: 'Volunteer Experience'`, `badge: 'Volunteer Testimonial'`, accessible labels, and the two `/vid/` paths. Do not render the text area beneath video stories.
 
 In `StoryMedia`, add a video branch before the image branch:
 
@@ -107,8 +110,8 @@ Expected: the focused test passes, lint/build exit successfully, and diff check 
 ```bash
 git add scripts/community-stories-videos.test.mjs \
   components/ui/CommunityStoriesSection.tsx \
-  public/vid/volunteer-testimonial-1.mov \
-  public/vid/volunteer-testimonial-2.mov \
+  public/vid/volunteer-testimonial-1.mp4 \
+  public/vid/volunteer-testimonial-2.mp4 \
   docs/superpowers/plans/2026-08-09-volunteer-testimonial-videos.md
 git commit -m "Add volunteer testimonial videos"
 ```

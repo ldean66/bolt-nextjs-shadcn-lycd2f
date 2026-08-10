@@ -10,7 +10,7 @@ import { cn } from '@/lib/utils';
 type CommunityStory = {
   id: string;
   title: string;
-  description: string;
+  description?: string;
   mediaType: 'instagram-embed' | 'image' | 'video';
   mediaSrc?: string;
   embedUrl?: string;
@@ -95,20 +95,16 @@ const communityStories: CommunityStory[] = [
   {
     id: 'volunteer-testimonial-1',
     title: 'Volunteer Experience',
-    description:
-      'An anonymous volunteer shares their experience supporting the mission of More Than Conquerors.',
     mediaType: 'video',
-    mediaSrc: '/vid/volunteer-testimonial-1.mov',
+    mediaSrc: '/vid/volunteer-testimonial-1.mp4',
     alt: 'Anonymous volunteer testimonial about their experience with More Than Conquerors',
     badge: 'Volunteer Testimonial',
   },
   {
     id: 'volunteer-testimonial-2',
     title: 'Volunteer Experience',
-    description:
-      'An anonymous volunteer reflects on their experience with More Than Conquerors and its community.',
     mediaType: 'video',
-    mediaSrc: '/vid/volunteer-testimonial-2.mov',
+    mediaSrc: '/vid/volunteer-testimonial-2.mp4',
     alt: 'Anonymous volunteer testimonial about their experience with More Than Conquerors',
     badge: 'Volunteer Testimonial',
   },
@@ -317,29 +313,33 @@ export default function CommunityStoriesSection() {
                     <CardContent className="flex h-full flex-col p-4 sm:p-5">
                       <StoryMedia story={story} />
 
-                      <div className="flex h-full flex-col p-2 pt-5">
-                        <div className="mb-3 inline-flex w-fit items-center rounded-full bg-pink-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-pink-700">
-                          {story.title}
-                        </div>
-                        <p className="text-sm leading-6 text-gray-600">{story.description}</p>
-
-                        {story.mediaType !== 'video' && story.postUrl ? (
-                          <div className="mt-5 flex items-center justify-between gap-4">
-                            <a
-                              href={story.postUrl}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className={cn(
-                                'inline-flex items-center gap-2 rounded-full border border-pink-700 bg-pink-600 px-4 py-2 text-sm font-semibold text-white shadow-md transition-colors',
-                                'hover:bg-pink-700 hover:shadow-lg'
-                              )}
-                            >
-                              Open Story
-                              <ArrowUpRight className="h-4 w-4" />
-                            </a>
+                      {story.mediaType !== 'video' ? (
+                        <div className="flex h-full flex-col p-2 pt-5">
+                          <div className="mb-3 inline-flex w-fit items-center rounded-full bg-pink-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-pink-700">
+                            {story.title}
                           </div>
-                        ) : null}
-                      </div>
+                          {story.description ? (
+                            <p className="text-sm leading-6 text-gray-600">{story.description}</p>
+                          ) : null}
+
+                          {story.postUrl ? (
+                            <div className="mt-5 flex items-center justify-between gap-4">
+                              <a
+                                href={story.postUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={cn(
+                                  'inline-flex items-center gap-2 rounded-full border border-pink-700 bg-pink-600 px-4 py-2 text-sm font-semibold text-white shadow-md transition-colors',
+                                  'hover:bg-pink-700 hover:shadow-lg'
+                                )}
+                              >
+                                Open Story
+                                <ArrowUpRight className="h-4 w-4" />
+                              </a>
+                            </div>
+                          ) : null}
+                        </div>
+                      ) : null}
                     </CardContent>
                   </Card>
                 </CarouselItem>

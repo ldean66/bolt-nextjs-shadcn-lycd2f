@@ -6,10 +6,10 @@ Add the two supplied volunteer testimonial videos to the existing Community Stor
 
 ## Scope
 
-- Copy both supplied `.mov` files into `public/vid` with clear, anonymous filenames.
+- Convert both supplied `.mov` files to H.264/AAC `.mp4` files in `public/vid` with clear, anonymous filenames.
 - Extend the existing `CommunityStory` media model with a local-video variant.
 - Add two new carousel entries titled **Volunteer Experience** and badged **Volunteer Testimonial**.
-- Describe each entry as an anonymous volunteer sharing their experience with More Than Conquerors.
+- Do not show a title or descriptive caption beneath either testimonial video.
 - Render each video with the browser's native controls.
 - Do not autoplay. Allow sound when the visitor chooses to play the video.
 - Keep the existing Instagram and image stories unchanged.
@@ -22,7 +22,7 @@ Add the two supplied volunteer testimonial videos to the existing Community Stor
 - `image`: preserve the existing Next.js image presentation.
 - `video`: render a responsive HTML `<video>` element using the local public asset.
 
-Local video cards will not display the existing **Open Story** link because their content is played directly in the card. Instagram and image entries will retain their current links.
+Local video cards will not display the title, descriptive caption, or existing **Open Story** link because their content is played directly in the card. The overlaid **Volunteer Testimonial** badge remains. Instagram and image entries will retain their current text and links.
 
 ## Accessibility and Performance
 
