@@ -11,10 +11,10 @@ type CommunityStory = {
   id: string;
   title: string;
   description: string;
-  mediaType: 'instagram-embed' | 'image';
+  mediaType: 'instagram-embed' | 'image' | 'video';
   mediaSrc?: string;
   embedUrl?: string;
-  postUrl: string;
+  postUrl?: string;
   alt: string;
   badge: string;
 };
@@ -92,6 +92,26 @@ const newsHighlights: NewsHighlight[] = [
 const sortedNewsHighlights = [...newsHighlights].sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
 
 const communityStories: CommunityStory[] = [
+  {
+    id: 'volunteer-testimonial-1',
+    title: 'Volunteer Experience',
+    description:
+      'An anonymous volunteer shares their experience supporting the mission of More Than Conquerors.',
+    mediaType: 'video',
+    mediaSrc: '/vid/volunteer-testimonial-1.mov',
+    alt: 'Anonymous volunteer testimonial about their experience with More Than Conquerors',
+    badge: 'Volunteer Testimonial',
+  },
+  {
+    id: 'volunteer-testimonial-2',
+    title: 'Volunteer Experience',
+    description:
+      'An anonymous volunteer reflects on their experience with More Than Conquerors and its community.',
+    mediaType: 'video',
+    mediaSrc: '/vid/volunteer-testimonial-2.mov',
+    alt: 'Anonymous volunteer testimonial about their experience with More Than Conquerors',
+    badge: 'Volunteer Testimonial',
+  },
   {
     id: 'instagram-video',
     title: 'Community Moment',
@@ -176,6 +196,19 @@ function StoryMedia({ story }: { story: CommunityStory }) {
               </a>
             </blockquote>
           </div>
+        </div>
+      ) : story.mediaType === 'video' ? (
+        <div className="bg-pink-100 p-4">
+          <video
+            src={story.mediaSrc}
+            controls
+            preload="metadata"
+            playsInline
+            aria-label={story.alt}
+            className="mx-auto max-h-[70vh] w-full max-w-[540px] rounded-xl bg-black object-contain"
+          >
+            Your browser does not support embedded videos.
+          </video>
         </div>
       ) : (
         <div className="bg-pink-100 p-4">
@@ -290,20 +323,22 @@ export default function CommunityStoriesSection() {
                         </div>
                         <p className="text-sm leading-6 text-gray-600">{story.description}</p>
 
-                        <div className="mt-5 flex items-center justify-between gap-4">
-                          <a
-                            href={story.postUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className={cn(
-                              'inline-flex items-center gap-2 rounded-full border border-pink-700 bg-pink-600 px-4 py-2 text-sm font-semibold text-white shadow-md transition-colors',
-                              'hover:bg-pink-700 hover:shadow-lg'
-                            )}
-                          >
-                            Open Story
-                            <ArrowUpRight className="h-4 w-4" />
-                          </a>
-                        </div>
+                        {story.mediaType !== 'video' && story.postUrl ? (
+                          <div className="mt-5 flex items-center justify-between gap-4">
+                            <a
+                              href={story.postUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className={cn(
+                                'inline-flex items-center gap-2 rounded-full border border-pink-700 bg-pink-600 px-4 py-2 text-sm font-semibold text-white shadow-md transition-colors',
+                                'hover:bg-pink-700 hover:shadow-lg'
+                              )}
+                            >
+                              Open Story
+                              <ArrowUpRight className="h-4 w-4" />
+                            </a>
+                          </div>
+                        ) : null}
                       </div>
                     </CardContent>
                   </Card>
