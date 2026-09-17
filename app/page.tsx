@@ -466,7 +466,7 @@ export default function Home() {
                 >
                   {/* Performance plan: convert thumbs to WebP/AVIF later; keep originals for downloads. */}
                   <Image
-                    src={`/img/thumbs/${file}`}
+                    src={`/img/thumbs/${file}?v=20260916`}
                     alt={`Event ${idx + 1}`}
                     fill
                     sizes="(max-width: 640px) 70vw, 256px"
