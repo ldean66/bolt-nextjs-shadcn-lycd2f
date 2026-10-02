@@ -2,6 +2,7 @@
 
 import { Facebook, Twitter, Instagram, Youtube } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -15,8 +16,8 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">About Us</h4>
             <ul className="space-y-2">
-              <li><a href="#" className="hover:text-[#e84393] transition-colors">Our Mission</a></li>
-              <li><a href="#" className="hover:text-[#e84393] transition-colors">Leadership</a></li>
+              <li><Link href="/#about" className="hover:text-[#e84393] transition-colors">Our Mission</Link></li>
+              <li><Link href="/#board-members" className="hover:text-[#e84393] transition-colors">Leadership</Link></li>
               <li><a href="#" className="hover:text-[#e84393] transition-colors">Financials</a></li>
               <li><a href="#" className="hover:text-[#e84393] transition-colors">Annual Report</a></li>
               <li><a href="#" className="hover:text-[#e84393] transition-colors">Careers</a></li>

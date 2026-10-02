@@ -6,6 +6,7 @@ import { ArrowUpRight, HeartHandshake, Newspaper } from 'lucide-react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { Card, CardContent } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
+import FeaturedInterview from '@/components/ui/FeaturedInterview';
 
 type CommunityStory = {
   id: string;
@@ -240,6 +241,8 @@ export default function CommunityStoriesSection() {
               A curated look at recognition, shared moments, and the impact of the mission beyond the event gallery.
             </p>
           </div>
+
+          <FeaturedInterview />
 
           <div className="mb-10 grid gap-6 lg:grid-cols-2">
             {sortedNewsHighlights.map((highlight) => (

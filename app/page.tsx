@@ -500,19 +500,19 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="flex space-x-6 overflow-x-auto pb-4 -mx-4 px-4 sm:px-0 md:justify-center md:overflow-visible md:-mx-0 md:px-0">
             <div className="flex flex-col items-center space-y-4 flex-shrink-0">
-              <a href="https://www.cancercare.org/" className="block w-[300px] h-[200px] bg-cover bg-center" style={{ backgroundImage: "url('img/80cancerCare.png')" }}></a>
+              <a href="https://www.cancercare.org/" className="block w-[300px] h-[200px] bg-cover bg-center" style={{ backgroundImage: "url('/img/80cancerCare.png')" }}></a>
               <span className="text-black text-sm font-bold text-center">80 Cancer Care</span>
             </div>
             <div className="flex flex-col items-center space-y-4 flex-shrink-0">
-              <a href="https://www.cancer.org" className="block w-[300px] h-[200px] bg-cover bg-center" style={{ backgroundImage: "url('img/americanCancerSociety.png')" }}></a>
+              <a href="https://www.cancer.org" className="block w-[300px] h-[200px] bg-cover bg-center" style={{ backgroundImage: "url('/img/americanCancerSociety.png')" }}></a>
               <span className="text-black text-sm font-bold text-center">Breast Cancer Support Group Finder (American Cancer Society)</span>
             </div>
             <div className="flex flex-col items-center space-y-4 flex-shrink-0">
-              <a href="https://www.cdc.gov/breast-cancer/what-cdc-is-doing/" className="block w-[300px] h-[200px] bg-cover bg-center" style={{ backgroundImage: "url('img/cdc.png')" }}></a>
+              <a href="https://www.cdc.gov/breast-cancer/what-cdc-is-doing/" className="block w-[300px] h-[200px] bg-cover bg-center" style={{ backgroundImage: "url('/img/cdc.png')" }}></a>
               <span className="text-black text-sm font-bold text-center">CDC Breast Cancer</span>
             </div>
             <div className="flex flex-col items-center space-y-4 flex-shrink-0">
-              <a href="https://search.nih.gov/search?utf8=✓&affiliate=nih&query=breast+cancer" className="block w-[300px] h-[200px] bg-cover bg-center" style={{ backgroundImage: "url('img/nih.png')" }}></a>
+              <a href="https://search.nih.gov/search?utf8=✓&affiliate=nih&query=breast+cancer" className="block w-[300px] h-[200px] bg-cover bg-center" style={{ backgroundImage: "url('/img/nih.png')" }}></a>
               <span className="text-black text-sm font-bold text-center">National Institute of Health</span>
             </div>
           </div>
@@ -529,11 +529,11 @@ export default function Home() {
 
           <div className="flex space-x-6 overflow-x-auto pb-4 -mx-4 px-4 sm:px-0 md:justify-center md:overflow-visible md:-mx-0 md:px-0">
             <div className="flex flex-col items-center space-y-4 flex-shrink-0">
-              <a href="https://www.oncologynutrition.org/home" className="block w-[300px] h-[200px] bg-cover bg-center" style={{ backgroundImage: "url('img/oncologyNutrition.png')" }}></a>
+              <a href="https://www.oncologynutrition.org/home" className="block w-[300px] h-[200px] bg-cover bg-center" style={{ backgroundImage: "url('/img/oncologyNutrition.png')" }}></a>
               <span className="text-black text-sm font-bold text-center">The Oncology Nutrition Dietetic Practice Group</span>
             </div>
             <div className="flex flex-col items-center space-y-4 flex-shrink-0">
-              <a href="https://www.aicr.org/" className="block w-[300px] h-[200px] bg-cover bg-center" style={{ backgroundImage: "url('img/americanInstituteForCancer.png')" }}></a>
+              <a href="https://www.aicr.org/" className="block w-[300px] h-[200px] bg-cover bg-center" style={{ backgroundImage: "url('/img/americanInstituteForCancer.png')" }}></a>
               <span className="text-black text-sm font-bold text-center">American Institute for Cancer Research</span>
             </div>
           </div>
@@ -549,15 +549,15 @@ export default function Home() {
 
           <div className="flex flex-nowrap sm:flex-wrap space-x-6 overflow-x-auto pb-4 -mx-4 px-4 sm:px-0 md:justify-center md:overflow-visible md:-mx-0 md:px-0">
             <div className="flex flex-col items-center space-y-4 flex-shrink-0">
-              <a href="https://www.hopkinsmedicine.org/kimmel-cancer-center" className="block w-[300px] h-[200px] bg-cover bg-center" style={{ backgroundImage: "url('img/johnHopkins.png')" }}></a>
+              <a href="https://www.hopkinsmedicine.org/kimmel-cancer-center" className="block w-[300px] h-[200px] bg-cover bg-center" style={{ backgroundImage: "url('/img/johnHopkins.png')" }}></a>
               <span className="text-black text-sm font-bold text-center">Johns Hopkins Medicine (#1 in Maryland #3 in the Country.)</span>
             </div>
             <div className="flex flex-col items-center space-y-4 flex-shrink-0">
-              <a href="https://www.nccn.org/" className="block w-[300px] h-[200px] bg-cover bg-center" style={{ backgroundImage: "url('img/cancerSupportCommunity.png')" }}></a>
+              <a href="https://www.nccn.org/" className="block w-[300px] h-[200px] bg-cover bg-center" style={{ backgroundImage: "url('/img/cancerSupportCommunity.png')" }}></a>
               <span className="text-black text-sm font-bold text-center">National Comprehensive Cancer Network (NCCN)</span>
             </div>
             <div className="flex flex-col items-center space-y-4 flex-shrink-0">
-              <a href="https://www.cdc.gov/breast-cervical-cancer-screening/" className="block w-[300px] h-[200px] bg-cover bg-center" style={{ backgroundImage: "url('img/cdc.png')" }}></a>
+              <a href="https://www.cdc.gov/breast-cervical-cancer-screening/" className="block w-[300px] h-[200px] bg-cover bg-center" style={{ backgroundImage: "url('/img/cdc.png')" }}></a>
               <span className="text-black text-sm font-bold text-center">Breast and Cervical Cancer Program (CDC)</span>
             </div>
           </div>
@@ -573,15 +573,15 @@ export default function Home() {
 
           <div className="flex space-x-6 overflow-x-auto pb-4 -mx-4 px-4 sm:px-0 md:justify-center md:overflow-visible md:-mx-0 md:px-0">
             <div className="flex flex-col items-center space-y-4 flex-shrink-0">
-              <a href="https://www.breastcancer.org" className="block w-[300px] h-[200px] bg-cover bg-center" style={{ backgroundImage: "url('img/breastCancerOrg.png')" }}></a>
+              <a href="https://www.breastcancer.org" className="block w-[300px] h-[200px] bg-cover bg-center" style={{ backgroundImage: "url('/img/breastCancerOrg.png')" }}></a>
               <span className="text-black text-sm font-bold text-center">BreastCancer.org</span>
             </div>
             <div className="flex flex-col items-center space-y-4 flex-shrink-0">
-              <a href="https://www.komen.org" className="block w-[300px] h-[200px] bg-cover bg-center" style={{ backgroundImage: "url('img/susanGkomen.png')" }}></a>
+              <a href="https://www.komen.org" className="block w-[300px] h-[200px] bg-cover bg-center" style={{ backgroundImage: "url('/img/susanGkomen.png')" }}></a>
               <span className="text-black text-sm font-bold text-center">Susan G. Komen</span>
             </div>
             <div className="flex flex-col items-center space-y-4 flex-shrink-0">
-              <a href="https://www.cancer.gov" className="block w-[300px] h-[200px] bg-cover bg-center" style={{ backgroundImage: "url('img/nih.png')" }}></a>
+              <a href="https://www.cancer.gov" className="block w-[300px] h-[200px] bg-cover bg-center" style={{ backgroundImage: "url('/img/nih.png')" }}></a>
               <span className="text-black text-sm font-bold text-center">National Cancer Institute (NCI)</span>
             </div>
           </div>
@@ -600,11 +600,11 @@ export default function Home() {
 
           <div className="flex space-x-6 overflow-x-auto pb-4 -mx-4 px-4 sm:px-0 md:justify-center md:overflow-visible md:-mx-0 md:px-0">
             <div className="flex flex-col items-center space-y-4 flex-shrink-0">
-              <a href="https://www.nationalbreastcancer.org" className="block w-[300px] h-[200px] bg-cover bg-center" style={{ backgroundImage: "url('img/nbcfInc.png')" }}></a>
+              <a href="https://www.nationalbreastcancer.org" className="block w-[300px] h-[200px] bg-cover bg-center" style={{ backgroundImage: "url('/img/nbcfInc.png')" }}></a>
               <span className="text-black text-sm font-bold text-center">National Breast Cancer Foundation Prayer Wall</span>
             </div>
             <div className="flex flex-col items-center space-y-4 flex-shrink-0">
-              <a href="https://www.fummd.com/ministries" className="block w-[300px] h-[200px] bg-cover bg-center" style={{ backgroundImage: "url('img/faithUnitedMinistries_.png')" }}></a>
+              <a href="https://www.fummd.com/ministries" className="block w-[300px] h-[200px] bg-cover bg-center" style={{ backgroundImage: "url('/img/faithUnitedMinistries_.png')" }}></a>
               <span className="text-black text-sm font-bold text-center">Faith United Ministries has a ministry called Life After Cancer</span>
             </div>
           </div>
@@ -629,15 +629,15 @@ export default function Home() {
 
           <div className="flex flex-nowrap sm:flex-wrap space-x-6 overflow-x-auto pb-4 -mx-4 px-4 sm:px-0 md:justify-center md:overflow-visible md:-mx-0 md:px-0">
             <div className="flex flex-col items-center space-y-4 flex-shrink-0">
-              <a href="https://pinkfund.org/" className="block w-[300px] h-[200px] bg-cover bg-center" style={{ backgroundImage: "url('img/pinkFund.png')" }}></a>
+              <a href="https://pinkfund.org/" className="block w-[300px] h-[200px] bg-cover bg-center" style={{ backgroundImage: "url('/img/pinkFund.png')" }}></a>
               <span className="text-black text-sm font-bold text-center">The Pink Fund</span>
             </div>
             <div className="flex flex-col items-center space-y-4 flex-shrink-0">
-              <a href="https://copays.org/" className="block w-[300px] h-[200px] bg-cover bg-center" style={{ backgroundImage: "url('img/coPayRelief.png')" }}></a>
+              <a href="https://copays.org/" className="block w-[300px] h-[200px] bg-cover bg-center" style={{ backgroundImage: "url('/img/coPayRelief.png')" }}></a>
               <span className="text-black text-sm font-bold text-center">Patient Advocate Foundation Co-Pay Relief</span>
             </div>
             <div className="flex flex-col items-center space-y-4 flex-shrink-0">
-              <a href="https://www.healthwellfoundation.org/" className="block w-[300px] h-[200px] bg-cover bg-center" style={{ backgroundImage: "url('img/healthWellFoundation.png')" }}></a>
+              <a href="https://www.healthwellfoundation.org/" className="block w-[300px] h-[200px] bg-cover bg-center" style={{ backgroundImage: "url('/img/healthWellFoundation.png')" }}></a>
               <span className="text-black text-sm font-bold text-center">HealthWell Foundation</span>
             </div>
           </div>
@@ -657,15 +657,15 @@ export default function Home() {
 
           <div className="flex space-x-6 overflow-x-auto pb-4 -mx-4 px-4 sm:px-0 md:justify-center md:overflow-visible md:-mx-0 md:px-0">
             <div className="flex flex-col items-center space-y-4 flex-shrink-0">
-              <a href="https://www.goodrx.com/" className="block w-[300px] h-[200px] bg-cover bg-center" style={{ backgroundImage: "url('img/goodRx.png')" }}></a>
+              <a href="https://www.goodrx.com/" className="block w-[300px] h-[200px] bg-cover bg-center" style={{ backgroundImage: "url('/img/goodRx.png')" }}></a>
               <span className="text-black text-sm font-bold text-center">GoodRx</span>
             </div>
             <div className="flex flex-col items-center space-y-4 flex-shrink-0">
-              <a href="https://www.needymeds.org/" className="block w-[300px] h-[200px] bg-cover bg-center" style={{ backgroundImage: "url('img/needyMeds.png')" }}></a>
+              <a href="https://www.needymeds.org/" className="block w-[300px] h-[200px] bg-cover bg-center" style={{ backgroundImage: "url('/img/needyMeds.png')" }}></a>
               <span className="text-black text-sm font-bold text-center">NeedyMeds</span>
             </div>
             <div className="flex flex-col items-center space-y-4 flex-shrink-0">
-              <a href="https://www.pparx.org/" className="block w-[300px] h-[200px] bg-cover bg-center" style={{ backgroundImage: "url('img/professionalPrescriptionAdvice.png')" }}></a>
+              <a href="https://www.pparx.org/" className="block w-[300px] h-[200px] bg-cover bg-center" style={{ backgroundImage: "url('/img/professionalPrescriptionAdvice.png')" }}></a>
               <span className="text-black text-sm font-bold text-center">Partnership for Prescription Assistance (PPA)</span>
             </div>
           </div>
