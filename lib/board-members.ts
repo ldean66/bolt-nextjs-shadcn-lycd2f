@@ -5,6 +5,7 @@ export type BoardMember = {
   bio: string;
   image: string;
   alt: string;
+  introVideo?: string;
 };
 
 export const boardMembers: BoardMember[] = [
@@ -25,6 +26,7 @@ export const boardMembers: BoardMember[] = [
       'Chevelle has worked in the hospitality industry for more than 20 years with a business degree from Morgan State University. She brings a wealth of professional corporate experience as a certified event planner and leading a wedding ministry in her church for over 20 years. In her spare time, she enjoys traveling, fine dining, concerts, volunteering and spending time with family and friends.',
     image: '/img/board/Chevelle Jackson.png',
     alt: 'Portrait of Chevelle Jackson',
+    introVideo: '/vid/chevelle-jackson-intro.mp4',
   },
   {
     slug: 'deirdre-adams',
@@ -34,6 +36,7 @@ export const boardMembers: BoardMember[] = [
       'Deirdre is a native of Harrisburg, PA and lived in the DMV area for the majority of her adult life. With a career in finance for over 30 years, she knows how to support organizations in their financial efforts to help support others. In her spare time she loves to read and volunteer at the hospital supporting sick children and their families.',
     image: '/img/board/Deirdre Adams.png',
     alt: 'Portrait of Deirdre Adams',
+    introVideo: '/vid/deirdre-adams-intro.mp4',
   },
   {
     slug: 'janet-mosby',
@@ -61,6 +64,7 @@ export const boardMembers: BoardMember[] = [
       'Linda is a believer in the Lord Jesus Christ and a conqueror. She loves to read and has a heart of giving and pouring into others.',
     image: '/img/board/Linda Goodman.png',
     alt: 'Portrait of Linda Goodman',
+    introVideo: '/vid/linda-goodman-intro.mp4',
   },
   {
     slug: 'kathy-dejesus',
@@ -70,6 +74,7 @@ export const boardMembers: BoardMember[] = [
       'Kathy is a healthcare professional who also teaches in her field. She loves to read, knit and crochet. She is a breast cancer conqueror.',
     image: '/img/board/Kathy DeJesus.png',
     alt: 'Portrait of Kathy DeJesus',
+    introVideo: '/vid/kathy-dejesus-intro.mp4',
   },
   {
     slug: 'doreen-doye',
@@ -79,5 +84,6 @@ export const boardMembers: BoardMember[] = [
       'Doreen is a retired MCPS financial specialist. In her spare time, she enjoys cooking and crafting and always looking for opportunities to volunteer and help others. She is a breast cancer conqueror.',
     image: '/img/board/Doreen Doye.png',
     alt: 'Portrait of Doreen Doye',
+    introVideo: '/vid/doreen-doye-intro.mp4',
   },
 ];

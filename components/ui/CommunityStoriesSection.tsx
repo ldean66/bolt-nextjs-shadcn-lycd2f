@@ -14,6 +14,7 @@ type CommunityStory = {
   description?: string;
   mediaType: 'instagram-embed' | 'image' | 'video';
   mediaSrc?: string;
+  posterSrc?: string;
   embedUrl?: string;
   postUrl?: string;
   alt: string;
@@ -95,17 +96,19 @@ const sortedNewsHighlights = [...newsHighlights].sort((a, b) => b.publishedAt.lo
 const communityStories: CommunityStory[] = [
   {
     id: 'volunteer-testimonial-1',
-    title: 'Volunteer Experience',
+    title: 'MLK Day Volunteers',
     mediaType: 'video',
     mediaSrc: '/vid/volunteer-testimonial-1.mp4',
+    posterSrc: '/vid/volunteer-testimonial-1-poster.jpg',
     alt: 'Anonymous volunteer testimonial about their experience with More Than Conquerors',
     badge: 'Volunteer Testimonial',
   },
   {
     id: 'volunteer-testimonial-2',
-    title: 'Volunteer Experience',
+    title: 'MLK Day Volunteers',
     mediaType: 'video',
     mediaSrc: '/vid/volunteer-testimonial-2.mp4',
+    posterSrc: '/vid/volunteer-testimonial-2-poster.jpg',
     alt: 'Anonymous volunteer testimonial about their experience with More Than Conquerors',
     badge: 'Volunteer Testimonial',
   },
@@ -198,6 +201,7 @@ function StoryMedia({ story }: { story: CommunityStory }) {
         <div className="bg-pink-100 p-4">
           <video
             src={story.mediaSrc}
+            poster={story.posterSrc}
             controls
             preload="metadata"
             playsInline
@@ -315,6 +319,12 @@ export default function CommunityStoriesSection() {
                   <Card className="mx-auto h-full max-w-3xl overflow-visible rounded-3xl border border-pink-100 bg-white/95 shadow-xl">
                     <CardContent className="flex h-full flex-col p-4 sm:p-5">
                       <StoryMedia story={story} />
+
+                      {story.mediaType === 'video' ? (
+                        <p className="px-2 pt-4 text-center text-sm font-semibold text-pink-700">
+                          {story.title}
+                        </p>
+                      ) : null}
 
                       {story.mediaType !== 'video' ? (
                         <div className="flex h-full flex-col p-2 pt-5">

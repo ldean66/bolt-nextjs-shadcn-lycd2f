@@ -59,6 +59,25 @@ export default async function BoardProfilePage({ params }: BoardProfileProps) {
             <h1 className="mt-3 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">{member.name}</h1>
             <div className="my-6 h-1 w-14 rounded-full bg-gradient-to-r from-pink-500 to-purple-400" />
             <p className="text-base leading-8 text-gray-600 sm:text-lg">{member.bio}</p>
+            {member.introVideo ? (
+              <section className="mt-8" aria-labelledby="intro-video-heading">
+                <h2 id="intro-video-heading" className="text-xl font-semibold text-gray-900">
+                  Meet {member.name}
+                </h2>
+                <video
+                  controls
+                  playsInline
+                  preload="none"
+                  poster={member.image}
+                  aria-label={`Introduction from ${member.name}`}
+                  className="mt-4 aspect-[9/16] w-full max-w-xs rounded-2xl bg-black object-contain"
+                >
+                  <source src={member.introVideo} type="video/mp4" />
+                  Your browser does not support video playback.{' '}
+                  <a href={member.introVideo}>Download {member.name}&apos;s introduction</a>.
+                </video>
+              </section>
+            ) : null}
             {member.slug === 'lydia-dean-reese' ? (
               <Link href="/#lydia-interview" className="mt-8 flex items-center gap-4 rounded-2xl border border-pink-100 bg-pink-50 p-5 text-pink-800 transition-colors hover:bg-pink-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pink-600 focus-visible:ring-offset-4">
                 <Play className="h-6 w-6 shrink-0" aria-hidden="true" />

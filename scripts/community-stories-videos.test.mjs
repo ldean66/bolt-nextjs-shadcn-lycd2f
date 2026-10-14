@@ -4,7 +4,7 @@ import test from 'node:test';
 
 const source = readFileSync('components/ui/CommunityStoriesSection.tsx', 'utf8');
 
-test('renders two caption-free MP4 volunteer testimonials in the carousel', () => {
+test('renders two MP4 volunteer testimonials in the carousel', () => {
   assert.match(source, /mediaType: 'instagram-embed' \| 'image' \| 'video'/);
   assert.equal((source.match(/badge: 'Volunteer Testimonial'/g) ?? []).length, 2);
   assert.match(source, /\/vid\/volunteer-testimonial-1\.mp4/);
