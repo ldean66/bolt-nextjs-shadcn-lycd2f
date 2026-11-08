@@ -4,6 +4,7 @@ import Footer from '@/components/ui/Footer';
 import { Card, CardContent } from "@/components/ui/card";
 import TestimonialsSection from '@/components/ui/TestimonialsSection';
 import CommunityStoriesSection from '@/components/ui/CommunityStoriesSection';
+import GratitudeSection from '@/components/ui/GratitudeSection';
 import BoardMembersSection from '@/components/ui/BoardMembersSection';
 import SupportSection from '@/components/ui/SupportSection';
 import { BookOpen, HeartPulse, Lightbulb, HandHeart, Rocket, Puzzle } from "lucide-react";
@@ -478,6 +479,7 @@ export default function Home() {
         </div>
       </section>
       <CommunityStoriesSection />
+      <GratitudeSection />
       <BoardMembersSection />
       <section id="resources" className="bg-[#e84393] py-20">
         <div className="container mx-auto px-4">
