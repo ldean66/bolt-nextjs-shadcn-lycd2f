@@ -9,7 +9,6 @@ const profiles = [
   ['chevelle-jackson', 'Chevelle Jackson'],
   ['deirdre-adams', 'Deirdre Adams'],
   ['janet-mosby', 'Janet Mosby'],
-  ['jackie-bromfield', 'Jackie Bromfield'],
   ['linda-goodman', 'Linda Goodman'],
   ['kathy-dejesus', 'Kathy DeJesus'],
   ['doreen-doye', 'Doreen Doye'],

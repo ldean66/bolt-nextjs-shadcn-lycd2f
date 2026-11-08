@@ -48,15 +48,6 @@ export const boardMembers: BoardMember[] = [
     alt: 'Portrait of Janet Mosby',
   },
   {
-    slug: 'jackie-bromfield',
-    name: 'Jackie Bromfield',
-    role: 'Board Member',
-    bio:
-      'Jackie is a dedicated realtor with Coldwell Banker, serving clients across all life stages, from first-time buyers to seasoned investors with market expertise and a client-first approach. She also advocates passionately for families navigating the school system, reflecting her commitment to both community and client success.',
-    image: '/img/board/Jackie Bromfield.png',
-    alt: 'Portrait of Jackie Bromfield',
-  },
-  {
     slug: 'linda-goodman',
     name: 'Linda Goodman',
     role: 'Board Member',
