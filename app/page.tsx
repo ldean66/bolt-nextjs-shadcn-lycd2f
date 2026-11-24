@@ -358,7 +358,6 @@ export default function Home() {
               'octoberEventPoster.jpeg',
               'previewEventPhoto.jpeg',
               'eventPhoto56.jpeg',
-              'eventPhoto58.jpeg',
               'eventPhoto59.jpeg',
               'eventPhoto62.jpeg',
               'eventPhoto63.jpeg',
