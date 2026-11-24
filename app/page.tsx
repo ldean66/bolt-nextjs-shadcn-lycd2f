@@ -355,7 +355,12 @@ export default function Home() {
           <h2 className="text-3xl font-bold mb-6 text-gray-900 text-center">Event Gallery</h2>
           <div className="flex space-x-4 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-300">
             {['vendor-table.jpeg',
-              'octoberEventPoster.jpeg',
+              'MTC-edited-01.png',
+              'MTC-edited-02.png',
+              'MTC-edited-03.png',
+              'MTC-edited-04.png',
+              'MTC-edited-05.png',
+              'MTC-edited-06.png',
               'previewEventPhoto.jpeg',
               'eventPhoto56.jpeg',
               'eventPhoto59.jpeg',
