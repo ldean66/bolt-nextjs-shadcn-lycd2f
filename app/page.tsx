@@ -88,59 +88,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section aria-label="October 17 Strut for Support event" className="bg-white py-16 sm:py-20">
-        <div className="container mx-auto px-4">
-          <div className="mx-auto max-w-6xl">
-            <div className="mb-5 flex justify-start">
-              <div className="inline-flex items-center gap-3 rounded-full border border-pink-200 bg-white/90 px-5 py-2.5 text-sm font-semibold uppercase tracking-[0.24em] text-pink-700 shadow-lg shadow-pink-100/80 ring-1 ring-pink-100 animate-[pulse_3.6s_ease-in-out_infinite]">
-                <span className="h-2.5 w-2.5 rounded-full bg-pink-500 shadow-[0_0_18px_rgba(236,72,153,0.9)] animate-ping" />
-                Upcoming Event
-              </div>
-            </div>
-            <div className="grid gap-8 overflow-hidden rounded-[2rem] border border-pink-100 bg-gradient-to-br from-white via-pink-50/70 to-rose-100/60 p-6 shadow-xl lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:p-8">
-              <div className="order-2 lg:order-1">
-                <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
-                  Annual Strut for Support Brunch & Fashion Show
-                </h2>
-                <p className="mt-4 text-base leading-7 text-gray-600 sm:text-lg">
-                  More Than Conquerors is hosting Strut for Support on October 17, 2026 from 12:00 PM to 4:00 PM
-                  at the Civic Building, 1 Veterans Plaza, Silver Spring, MD. Join us for brunch, a fashion show,
-                  awards, speakers, vendors, and breast cancer support.
-                </p>
-                <div className="mt-6 space-y-2 text-sm font-medium uppercase tracking-[0.18em] text-pink-700 sm:text-base">
-                  <p>October 17, 2026</p>
-                  <p>12:00 PM to 4:00 PM</p>
-                  <p>Civic Building, Silver Spring, Maryland</p>
-                </div>
-                <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                  <Button asChild className="bg-pink-600 text-white hover:bg-pink-700">
-                    <a href="https://bit.ly/4vA0vTp" target="_blank" rel="noopener noreferrer">
-                      Buy Tickets
-                    </a>
-                  </Button>
-                  <Button asChild variant="outline" className="border-pink-300 text-pink-700 hover:bg-pink-50">
-                    <a href="/img/strut-for-support.PNG" target="_blank" rel="noopener noreferrer">
-                      Open Flyer
-                    </a>
-                  </Button>
-                </div>
-              </div>
-
-              <div className="order-1 lg:order-2">
-                <div className="overflow-hidden rounded-[1.75rem] border border-white/80 bg-white p-3 shadow-2xl ring-1 ring-pink-100/80">
-                  <Image
-                    src="/img/strut-for-support.PNG"
-                    alt="More Than Conquerors annual Strut for Support brunch and fashion show flyer for October 17, 2026"
-                    width={1024}
-                    height={1536}
-                    className="h-auto w-full rounded-[1.25rem] object-cover"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
       <section aria-label="Monthly giving promo" className="bg-white">
         <div className="container mx-auto px-4 py-8 sm:py-10 flex justify-center">
           <a href="#donate" className="block w-full max-w-xl sm:max-w-2xl">
